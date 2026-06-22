@@ -1,0 +1,984 @@
+{
+  "VIVIENDA DE CONCRETO": [
+    {
+      "codigo": "VC01",
+      "vidaUtil": 50,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada",
+      "cielo": "pvc_parcial_sin",
+      "pisos": "ceramica_economica",
+      "banos": 1,
+      "areaMin": 42,
+      "areaMax": 90,
+      "etiqueta": "Bloques de concreto/baldosas prefabricadas, repello quemado, pintura acrílica económica. Cielos de tablilla PVC parcial o sin cielo. Piso de cerámica económica. 1 baño económico. Área 42–90 m²."
+    },
+    {
+      "codigo": "VC02",
+      "vidaUtil": 55,
+      "paredes": "economica_fachaleta",
+      "cubierta": "lamina_galvanizada",
+      "cielo": "pvc_yeso",
+      "pisos": "terrazo_mosaico",
+      "banos": 1,
+      "areaMin": 80,
+      "areaMax": 110,
+      "etiqueta": "Bloques de concreto, fachaleta en algunas áreas, pintura económica. Cielos de tablilla PVC o láminas de yeso. Piso de terrazo, cerámica económica o mosaico. 1 baño normal. Área 80–110 m²."
+    },
+    {
+      "codigo": "VC03",
+      "vidaUtil": 65,
+      "paredes": "regular_fachaleta",
+      "cubierta": "lamina_galvanizada",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_medio",
+      "banos": 2,
+      "areaMin": 100,
+      "areaMax": 150,
+      "etiqueta": "Bloques de concreto con repello afinado, pintura de regular calidad, fachaleta en algunas áreas. Piso de porcelanato/terrazo/cerámica mediana. 2 baños normales. Área 100–150 m²."
+    },
+    {
+      "codigo": "VC04",
+      "vidaUtil": 70,
+      "paredes": "buena_fachaleta_enchape",
+      "cubierta": "lamina_estructural",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_medio",
+      "banos": 2,
+      "areaMin": 140,
+      "areaMax": 220,
+      "etiqueta": "Bloques de concreto, repello afinado, fachaleta y/o enchapes en algunas áreas, pintura de regular calidad. Piso porcelanato/cerámica mediana. 2 baños (uno bueno, medio normal). Área 140–220 m²."
+    },
+    {
+      "codigo": "VC05",
+      "vidaUtil": 90,
+      "paredes": "buena_enmasillado",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_bueno",
+      "banos": 3,
+      "areaMin": 210,
+      "areaMax": 250,
+      "etiqueta": "Repello afinado enmasillado, pintura de buena calidad, fachaleta y/o enchapes. Cubierta esmaltada/imitación teja. Piso porcelanato/cerámica buena calidad. 3 baños (bueno + normal de servicio). Área 210–250 m²."
+    },
+    {
+      "codigo": "VC06",
+      "vidaUtil": 105,
+      "paredes": "buena_sectores_vidrio",
+      "cubierta": "teja_barro_asfaltica",
+      "cielo": "pvc_artesonado",
+      "pisos": "porcelanato_bueno",
+      "banos": 4,
+      "areaMin": 240,
+      "areaMax": 300,
+      "etiqueta": "Repello fino enmasillado, pintura buena calidad, sectores de vidrio, fachaleta/enchapes. Cubierta con teja de barro o asfáltica. Cielos con artesonados de buena calidad. 4 baños (2 muy bueno, 1 bueno, 1 normal). Área 240–300 m²."
+    },
+    {
+      "codigo": "VC07",
+      "vidaUtil": 120,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "teja_pendiente_pronunciada",
+      "cielo": "pvc_artesonado_fino",
+      "pisos": "porcelanato_muybueno",
+      "banos": 4,
+      "areaMin": 290,
+      "areaMax": 350,
+      "etiqueta": "Bloques de concreto, repello afinado, pintura de buena calidad, alturas 3,00–5,00 m. Cubierta con pendientes pronunciadas y teja. Cielos con artesonados de muy buena calidad. 4 baños (3,5 muy bueno + 1 normal). Área 290–350 m²."
+    },
+    {
+      "codigo": "VC08",
+      "vidaUtil": 120,
+      "paredes": "alta_ladrillo_vidrio",
+      "cubierta": "diseno_especial_bovedas",
+      "cielo": "artesonado_laqueado",
+      "pisos": "porcelanato_muybueno",
+      "banos": 4,
+      "areaMin": 340,
+      "areaMax": 400,
+      "etiqueta": "Bloques de concreto, ladrillo o mixto, amplios sectores de vidrio, pintura de alta calidad. Cubierta con cerchas de diseño especial, bóvedas. Cielos con artesonados laqueados finos. 4 baños (3,5 lujoso + 1 bueno). Área 340–400 m²."
+    },
+    {
+      "codigo": "VC09",
+      "vidaUtil": 120,
+      "paredes": "lujo_marmol_estuco",
+      "cubierta": "diseno_especial_bovedas",
+      "cielo": "artesonado_lujo",
+      "pisos": "marmol_lujo",
+      "banos": 5,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Ladrillo, doble altura, enchapes de maderas finas, mármol, estuco y fachaletas de muy buena calidad. Espacios con alturas dobles o triples, relieves y columnas. Cielos con artesonados de maderas finas. Más de un baño tipo lujoso. Sin límite de área definido (consultar manual)."
+    },
+    {
+      "codigo": "VC10",
+      "vidaUtil": 120,
+      "paredes": "lujo_excelente_vidrio_piso_cielo",
+      "cubierta": "diseno_especial_capas_vegetales",
+      "cielo": "artesonado_excelencia",
+      "pisos": "marmol_excelencia",
+      "banos": 6,
+      "areaMin": 390,
+      "areaMax": 9999,
+      "etiqueta": "Columnas de grandes dimensiones, ladrillo, paredes de vidrio de piso a cielo, enchapes de maderas finas y mármol de excelente calidad. Cubierta con losas, capas vegetales, domos. Cielos con artesonados de maderas finas (cristóbal) laqueados. Baño tipo lujoso en cada habitación. Área 390 m² y mayores."
+    }
+  ],
+  "VIVIENDA DE VIDRIO": [
+    {
+      "codigo": "VV01",
+      "vidaUtil": 120,
+      "paredes": "vidrio_muro_cortina",
+      "cubierta": "diseno_especial_domos",
+      "cielo": "acero_expuesto",
+      "pisos": "marmol_excelencia",
+      "banos": 2,
+      "areaMin": 390,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de vidrio templado y laminado en muros cortina, piel de vidrio, aluminio compuesto. Cubierta con cerchas/artesonados de maderas finas o hierro, domos. Cielos con acero expuesto y láminas de yeso. 1 baño principal lujoso + servicio muy bueno. Área 390 m² y mayores."
+    }
+  ],
+  "VIVIENDA DE MURO SECO": [
+    {
+      "codigo": "VS01",
+      "vidaUtil": 40,
+      "paredes": "muroseco_economico",
+      "cubierta": "lamina_galvanizada_sincanoas",
+      "cielo": "pvc_yeso",
+      "pisos": "vinil_economico",
+      "banos": 1,
+      "areaMin": 100,
+      "areaMax": 150,
+      "etiqueta": "Perfiles de acero galvanizado, láminas de yeso/cemento/fibra de vidrio a doble forro, pintura de regular calidad. Cubierta sin canoas. Piso de loseta de vinil, madera laminada o cerámica mediana. 1 baño normal. Área 100–150 m²."
+    },
+    {
+      "codigo": "VS02",
+      "vidaUtil": 60,
+      "paredes": "muroseco_bueno",
+      "cubierta": "teja_barro_mariposa",
+      "cielo": "pvc_yeso",
+      "pisos": "vinil_bueno",
+      "banos": 4,
+      "areaMin": 140,
+      "areaMax": 350,
+      "etiqueta": "Perfiles de acero galvanizado, láminas de yeso con malla de refuerzo y mortero, pintura de buena calidad. Cubierta con teja de barro, pendientes mariposa. 3,5 baños buenos + 1 normal de servicio. Área 140–350 m²."
+    }
+  ],
+  "VIVIENDA EN CONTENEDOR": [
+    {
+      "codigo": "VR01",
+      "vidaUtil": 45,
+      "paredes": "contenedor_economico",
+      "cubierta": "sin_tratamiento",
+      "cielo": "yeso_aislante",
+      "pisos": "ceramica_economica",
+      "banos": 1,
+      "areaMin": 13,
+      "areaMax": 29,
+      "etiqueta": "Contenedores reciclados de acero/aluminio anclados sobre cimientos elevados. Pintura epóxica exterior, aislante térmico interior. Sin tratamiento de cubierta (parte superior del contenedor). 1 baño económico. Área 13,84 a 28,64 m² por módulo."
+    },
+    {
+      "codigo": "VR02",
+      "vidaUtil": 50,
+      "paredes": "contenedor_bueno",
+      "cubierta": "lamina_galvanizada_mariposa",
+      "cielo": "yeso_aislante",
+      "pisos": "ceramica_media",
+      "banos": 2,
+      "areaMin": 13,
+      "areaMax": 57,
+      "etiqueta": "Contenedores reciclados anclados sobre cimientos elevados, unión de varios módulos. Cubierta con cerchas y láminas onduladas, pendiente mínima o mariposa. 2 baños normales. Múltiples contenedores combinados, posibles varias plantas."
+    }
+  ],
+  "VIVIENDA ENSAMBLADA": [
+    {
+      "codigo": "VE01",
+      "vidaUtil": 60,
+      "paredes": "ensamblada_bandeja_metalica",
+      "cubierta": "bandeja_metalica_reticulada",
+      "cielo": "yeso_similar",
+      "pisos": "vinilico_teca",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Acero en piezas diseñadas por proceso computadorizado, ensamblaje modular. Paredes exteriores en bandeja metálica ondulada. Cubierta en bandeja metálica reticulada de una pendiente. Piso con acabados de madera de teca o vinílicos."
+    }
+  ],
+  "VIVIENDA LOFT": [
+    {
+      "codigo": "VL01",
+      "vidaUtil": 115,
+      "paredes": "concreto_ladrillo_fachaleta",
+      "cubierta": "lamina_pendiente_pronunciada",
+      "cielo": "no_especificado",
+      "pisos": "madera_porcelanato_bueno",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto, áreas internas en concreto o láminas de yeso, recubrimientos con ladrillo y fachaletas. Alturas de 3,50 m o más. Cubierta con pendientes pronunciadas. Piso madera laminada y/o porcelanato de buena calidad."
+    }
+  ],
+  "VIVIENDA PIRÁMIDE": [
+    {
+      "codigo": "VI01",
+      "vidaUtil": 70,
+      "paredes": "metalica_vidrio_yeso",
+      "cubierta": "igual_a_paredes",
+      "cielo": "pvc_yeso_funcional",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Marcos de metal de tubo cuadrado soldados o articulados, placa corrida en concreto armado. Paredes y cubierta forman un solo elemento (lámina metálica, teja asfáltica o vidrio). Cielos de tablilla PVC que cumplen función de paredes internas."
+    }
+  ],
+  "VIVIENDA DE MADERA": [
+    {
+      "codigo": "VM01",
+      "vidaUtil": 80,
+      "paredes": "madera_unforro",
+      "cubierta": "lamina_galvanizada_sincanoas",
+      "cielo": "tabla_aglomerada",
+      "pisos": "tablon_cascote",
+      "banos": 1,
+      "areaMin": 36,
+      "areaMax": 90,
+      "etiqueta": "Zócalo de bloques de concreto, columnas de madera (cedro) 5×7,5 cm. Un solo forro de tabla. Cubierta sin canoas ni bajantes. Cielos de tabla o madera aglomerada. Piso tablón semiduro, cascote o mosaico. 1 baño económico. Área 36–90 m²."
+    },
+    {
+      "codigo": "VM02",
+      "vidaUtil": 100,
+      "paredes": "madera_dobleforro_biselada",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "pvc_biselada",
+      "pisos": "tabloncillo_terrazo",
+      "banos": 3,
+      "areaMin": 80,
+      "areaMax": 150,
+      "etiqueta": "Columnas de madera (cedro) 10×15 cm. Doble forro en tablilla biselada. Cubierta con canoas y bajantes. Cielos de tablilla PVC o biselada de regular calidad. Piso tabloncillo o contrapiso con terrazo. 2,5 baños (2 bueno + medio normal). Área 80–150 m²."
+    },
+    {
+      "codigo": "VM03",
+      "vidaUtil": 105,
+      "paredes": "madera_dobleforro_buena",
+      "cubierta": "teja_galvanizado_dos_cuatro_aguas",
+      "cielo": "artesonado_biselada",
+      "pisos": "madera_tabloncillo_bueno",
+      "banos": 3,
+      "areaMin": 140,
+      "areaMax": 200,
+      "etiqueta": "Columnas de madera 10×15 cm. Doble forro en tablilla biselada de buena calidad (laurel, ciprés, surá). Cubierta a dos y cuatro aguas con canoas. Cielos con artesonados o tablilla biselada de buena calidad. Piso madera tabloncillo machihembrado. 3 baños (2 muy bueno + 1 normal). Área 140–200 m²."
+    },
+    {
+      "codigo": "VM04",
+      "vidaUtil": 120,
+      "paredes": "madera_dobleforro_muybuena",
+      "cubierta": "teja_barro_altas_gradientes",
+      "cielo": "artesonado_almendro",
+      "pisos": "ceramica_excelente_parquet",
+      "banos": 4,
+      "areaMin": 190,
+      "areaMax": 400,
+      "etiqueta": "Columnas de madera (cedro) 15×20 cm. Doble forro de tablilla biselada de muy buena calidad. Cubierta con teja de barro, dos a más aguas, altas gradientes. Cielos con artesonado y tablilla de almendro. Piso cerámica excelente o parquet de almendro. 4,5 baños (3,5 lujoso + 1 bueno servicio). Área 190–400 m²."
+    }
+  ],
+  "VIVIENDA DE BAMBÚ": [
+    {
+      "codigo": "VB01",
+      "vidaUtil": 40,
+      "paredes": "bambu_mortero",
+      "cubierta": "no_especificado",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Estructura de bambú con zócalo de bloques de concreto, entramado de bambú con estructura de madera de 10×15 cm. Bambú recubierto con mortero."
+    }
+  ],
+  "VIVIENDA DE ADOBE": [
+    {
+      "codigo": "VA01",
+      "vidaUtil": 50,
+      "paredes": "adobe_barro",
+      "cubierta": "no_especificado",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas u horcones de madera (cedro). Paredes de adobe: bloques de barro arcilloso (tierra negra/vegetal y tierra)."
+    }
+  ],
+  "VIVIENDA DE BAHAREQUE": [
+    {
+      "codigo": "VH01",
+      "vidaUtil": 45,
+      "paredes": "bahareque_cana",
+      "cubierta": "no_especificado",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 80,
+      "areaMax": 149,
+      "etiqueta": "Columnas u horcones de madera (cedro). Paredes de bahareque: caña brava colocada horizontalmente de columna a columna. Área 80–149 m²."
+    }
+  ],
+  "LOCAL COMERCIAL": [
+    {
+      "codigo": "LC01",
+      "vidaUtil": 45,
+      "paredes": "contenedor_economico",
+      "cubierta": "sin_tratamiento",
+      "cielo": "yeso_aislante",
+      "pisos": "vinil_economico",
+      "banos": 1,
+      "areaMin": 13,
+      "areaMax": 29,
+      "etiqueta": "Contenedor reciclado de acero/aluminio anclado sobre cimientos elevados. Sin tratamiento de cubierta (parte superior del contenedor). Cielos de láminas de yeso. Piso metal con madera aglomerada o vinílicos. 1 baño económico. Uso temporal, no habitable permanentemente. Área 13,84–28,64 m² por módulo."
+    },
+    {
+      "codigo": "LC02",
+      "vidaUtil": 75,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "tabla_aglomerada",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto con repello quemado, madera. Alturas de 2,50 m. Cubierta con cerchas de madera, láminas onduladas con canoas y bajantes. Cielos de lámina de madera aglomerada. Piso porcelanato o cerámica económica. 1 baño económico. Ventanas de dimensiones regulares, áreas pequeñas. Locales de 1 a 2 plantas."
+    },
+    {
+      "codigo": "LC03",
+      "vidaUtil": 90,
+      "paredes": "economica_fachaleta",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto con repello quemado, láminas de yeso/cemento/fibra de vidrio. Algunos enchapes de cerámica económica. Alturas de 3,00 m. Cielos de tablilla PVC suspendido con marco de aluminio. Piso porcelanato/cerámica mediana. 1 baño económico. Entrada sencilla, marcos de vitrinas de aluminio."
+    },
+    {
+      "codigo": "LC04",
+      "vidaUtil": 95,
+      "paredes": "buena_fachaleta_enchape",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_bueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto con repello fino, enchapes de cerámica de buena calidad. Alturas de 3,00 m. Cubierta con láminas rectangulares esmaltadas. Piso porcelanato/cerámica buena calidad. 1 baño normal. Amplias vitrinas con marcos de aluminio, cortina metálica, bodega posterior."
+    },
+    {
+      "codigo": "LC05",
+      "vidaUtil": 105,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_bueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto o prefabricado, repello fino o concreto, enchapes de cerámica/aluminio compuesto/policarbonato. Alturas mayores de 3,00 m. Piso porcelanato/cerámica buena calidad. 1 baño normal. Amplias vitrinas con marcos de aluminio anodizado, rótulos luminosos, bodega posterior."
+    },
+    {
+      "codigo": "LC06",
+      "vidaUtil": 120,
+      "paredes": "alta_ladrillo_vidrio",
+      "cubierta": "teja_pendiente_pronunciada",
+      "cielo": "artesonado_laqueado",
+      "pisos": "porcelanato_muybueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto/prefabricado, paneles de aluminio compuesto/policarbonato. Alturas dobles o mayores de 3,00 m. Cubierta con teja de barro. Cielos en perfil metálico esmaltado o tablilla de maderas finas. Piso porcelanato o cerámica importada de tránsito pesado muy buena calidad. 1 baño bueno. Fachadas con bloques decorativos, mármol, granito natural, vitrinas polarizadas."
+    }
+  ],
+  "CABAÑA": [
+    {
+      "codigo": "CÑ01",
+      "vidaUtil": 80,
+      "paredes": "madera_unforro",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "tabla_aglomerada",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 30,
+      "areaMax": 79,
+      "etiqueta": "Postes/troncos de 12,70 cm en madera tratada (melina, cedro, laurel o teca). Paredes de tablas traslapadas o troncos de 10 cm con barniz. Cubierta con techos de zinc industrial N°28 a dos aguas. Cielos en madera tablilla. Piso cerámica mediana. 1 baño normal. Corredor frontal. Área 30–79 m²."
+    },
+    {
+      "codigo": "CÑ02",
+      "vidaUtil": 100,
+      "paredes": "madera_dobleforro_biselada",
+      "cubierta": "teja_barro_altas_gradientes",
+      "cielo": "artesonado_biselada",
+      "pisos": "madera_tabloncillo_bueno",
+      "banos": 2,
+      "areaMin": 80,
+      "areaMax": 149,
+      "etiqueta": "Postes/troncos de 12,70 cm, paredes internas de 4,10×4,10 cm. Tablas traslapadas doble cara con tapajuntas, enchapes en piedra. Espacios con alturas dobles. Cubierta a dos o cuatro aguas, imitación teja. Cielos con artesonado en madera tablilla. Piso de madera o cerámica buena calidad. 2 baños normales. Chimenea, cochera para 1-2 vehículos. Área 80–149 m²."
+    },
+    {
+      "codigo": "CÑ03",
+      "vidaUtil": 105,
+      "paredes": "madera_dobleforro_muybuena",
+      "cubierta": "teja_barro_altas_gradientes",
+      "cielo": "artesonado_biselada",
+      "pisos": "madera_tabloncillo_bueno",
+      "banos": 2,
+      "areaMin": 150,
+      "areaMax": 300,
+      "etiqueta": "Postes/troncos de 12,70 cm con enchapes en piedra y/o ladrillo. Espacios con alturas dobles. Cubierta de zinc estructural, teja, a dos o más aguas. Cielos con artesonado en tablilla. Piso de madera buena calidad, deck en teca en terrazas. 2 baños normales. Pasillos centrales y mezzanine, chimenea, cochera con pérgolas. Área 150–300 m²."
+    }
+  ],
+  "CHALET": [
+    {
+      "codigo": "CH01",
+      "vidaUtil": 80,
+      "paredes": "madera_unforro",
+      "cubierta": "lamina_estructural",
+      "cielo": "tabla_aglomerada",
+      "pisos": "madera_porcelanato_bueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 42,
+      "etiqueta": "Columnas y vigas de madera tratada de ciprés sobre placas o pilotes. Paredes de ciprés en tronco rústico o doble forro. Cubierta con láminas estructurales esmaltadas N°26, a dos aguas. Cielos en madera ciprés. Piso de madera. 1 baño normal. Diseño sencillo, dormitorios en mezzanine. Área promedio 42 m²."
+    },
+    {
+      "codigo": "CH02",
+      "vidaUtil": 100,
+      "paredes": "regular_fachaleta",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "pvc_yeso",
+      "pisos": "madera_tabloncillo_bueno",
+      "banos": 1,
+      "areaMin": 64,
+      "areaMax": 100,
+      "etiqueta": "Concreto, mampostería integral, prefabricado o perfiles metálicos. Bloques de concreto con zócalo de 50 cm y alturas hasta 2,00 m. Cubierta con láminas onduladas imitación teja a dos aguas. Cielos en tablilla PVC, yeso o madera. Piso de madera/cerámica mediana calidad. 1 baño normal. Diseño sencillo, acabado normal. Área 64–100 m²."
+    }
+  ],
+  "EDIFICIO DE APARTAMENTOS": [
+    {
+      "codigo": "AP01",
+      "vidaUtil": 65,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada",
+      "cielo": "yeso_similar",
+      "pisos": "ceramica_economica",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto con repello quemado, prefabricado. Paredes internas de madera laminada o yeso, pintura acrílica económica. Alturas 2,40–3,00 m. Cubierta con láminas onduladas N°28, canoas expuestas. Cielos viguetas expuestas o láminas de yeso. Piso cerámica económica. 1 baño normal. Edificios de 1 a 5 plantas."
+    },
+    {
+      "codigo": "AP02",
+      "vidaUtil": 80,
+      "paredes": "regular_fachaleta",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "yeso_similar",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto, repello afinado, pintura regular calidad. Alturas 2,40–3,50 m. Cielos viguetas expuestas, láminas de yeso o concreto lanzado. Piso porcelanato/cerámica económica. 1 baño bueno. Dos dormitorios, balcón, closets. Espacio para un vehículo por apartamento. Puede tener ascensor. Edificios de 1 a 10 plantas."
+    },
+    {
+      "codigo": "AP03",
+      "vidaUtil": 95,
+      "paredes": "buena_fachaleta_enchape",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "yeso_similar",
+      "pisos": "porcelanato_bueno",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto repello fino, enchapes de piedra laja/ladrillo ornamental, pintura buena calidad. Alturas 2,40–4,00 m. Canoas de hierro galvanizado, bajantes PVC internos con red subterránea. Piso porcelanato buena calidad."
+    },
+    {
+      "codigo": "AP04",
+      "vidaUtil": 105,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "teja_pendiente_pronunciada",
+      "cielo": "yeso_similar",
+      "pisos": "porcelanato_bueno",
+      "banos": 3,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto/ladrillo repello fino, estuco, enchapes de piedra laja/ladrillo/maderas. Alturas 3,00–4,50 m. Cubierta con altas pendientes de teja de barro. Piso cerámica/mosaico/porcelanato buena calidad, parquet de teca, alfombra. 3 baños (1 muy bueno + 1 bueno + medio para visitas). Cochera con portones eléctricos. Edificios de 1 a 15 plantas."
+    },
+    {
+      "codigo": "AP05",
+      "vidaUtil": 115,
+      "paredes": "buena_sectores_vidrio",
+      "cubierta": "teja_pendiente_pronunciada",
+      "cielo": "artesonado_laqueado",
+      "pisos": "marmol_lujo",
+      "banos": 4,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto repello fino, fachadas con tensores y elementos de diseño modular, ladrillo, estuco, aluminio compuesto. Alturas 3,50–4,50 m. Cubierta con teja de barro, domos. Cielos con tablilla o artesonado laqueado. Piso porcelanato excelente calidad, alfombras excelente calidad. 4 baños (1 muy bueno + 1 bueno + medio visitas + 1 normal servicio). Estacionamiento 2+ vehículos. Edificios de 1 a 15+ plantas."
+    },
+    {
+      "codigo": "AP06",
+      "vidaUtil": 120,
+      "paredes": "lujo_marmol_estuco",
+      "cubierta": "diseno_especial_bovedas",
+      "cielo": "artesonado_lujo",
+      "pisos": "marmol_excelencia",
+      "banos": 5,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Acabados de máxima calidad, ladrillo, mármol, estuco. Espacios con alturas dobles. Cielos con artesonados finos. Piso mármol/porcelanato de excelente calidad. Más de un baño tipo lujoso. Edificios de mayor altura con amenidades de lujo."
+    }
+  ],
+  "HOTEL": [
+    {
+      "codigo": "HT01",
+      "vidaUtil": 90,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "tabla_aglomerada",
+      "pisos": "terrazo_mosaico",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería integral/prefabricado/perfiles metálicos. Bloques de concreto con repello quemado. Cielos en láminas de cartón o madera. Piso mosaico/terrazo. Baños económicos de uso común por planta. Diseño sencillo, sin jardines ni ascensor. Hoteles de 1 a 3 plantas, primera planta uso comercial."
+    },
+    {
+      "codigo": "HT02",
+      "vidaUtil": 105,
+      "paredes": "economica_fachaleta",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "pvc_yeso",
+      "pisos": "ceramica_economica",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de concreto armado o perfiles metálicos. Bloques de concreto repello fino. 1 baño normal por habitación + 2 económicos en restaurante. Recepción, vestíbulo, restaurante sencillo. Jardines sencillos, sin ascensor. Hoteles de 1 a 3 plantas."
+    },
+    {
+      "codigo": "HT03",
+      "vidaUtil": 115,
+      "paredes": "regular_fachaleta",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto/ladrillo, aluminio compuesto. Piso porcelanato/cerámica/alfombras mediana calidad. 1 baño normal por habitación, servicios buenos en restaurante/conferencias. Vestíbulo, recepción, restaurante, salas de conferencia. Jardines cuidados, ascensor. Hoteles de 1 a 3 plantas."
+    },
+    {
+      "codigo": "HT04",
+      "vidaUtil": 120,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "teja_pendiente_pronunciada",
+      "cielo": "artesonado_biselada",
+      "pisos": "porcelanato_bueno",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Muros de concreto armado, mármol, piedra, espejos en paredes internas. Piso cerámica importada buena calidad, alfombra buena calidad. 1 baño muy bueno por habitación + baterías muy buenas comunes. Vestíbulo, salas de conferencia, bar, restaurantes, tiendas. Sistema contra incendio, aire acondicionado. Ascensores. Hoteles de varias plantas."
+    },
+    {
+      "codigo": "HT05",
+      "vidaUtil": 120,
+      "paredes": "lujo_excelente_vidrio_piso_cielo",
+      "cubierta": "diseno_especial_domos",
+      "cielo": "artesonado_excelencia",
+      "pisos": "marmol_excelencia",
+      "banos": 3,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Muros de concreto con aluminio compuesto, mármol, piedra, azulejos, espejos, papel tapiz excelente calidad. 1 baño muy lujoso por habitación + baterías inteligentes comunes. Diseños elegantes, casino, gimnasio, tiendas, salón de belleza. Varios ascensores y de servicio. Hoteles de varias plantas, máximo lujo."
+    }
+  ],
+  "RESTAURANTE": [
+    {
+      "codigo": "RE01",
+      "vidaUtil": 90,
+      "paredes": "regular_fachaleta",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_medio",
+      "banos": 4,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de concreto armado/perfiles metálicos. Bloques de concreto repello fino, alturas hasta 3,00 m. 3 a 4 baños normales. Enchape de azulejo piso a cielo en cocina, trampas de grasa, sistema electromecánico especial para restaurantes. Edificios de 1 a 2 plantas."
+    },
+    {
+      "codigo": "RE02",
+      "vidaUtil": 105,
+      "paredes": "buena_fachaleta_enchape",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_bueno",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto repello fino, enchape de loseta de barro o aluminio compuesto. 2 baterías de baño buenas. Cocina enchapada piso a cielo, parrillas, sistemas de gas, trampas de grasa, cuartos fríos, área de juegos doble altura. Edificios de 1 a 2 plantas."
+    },
+    {
+      "codigo": "RE03",
+      "vidaUtil": 115,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_muybueno",
+      "banos": 4,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto repello fino, aluminio compuesto, alturas 3,00–3,50 m. 2 baterías buenas + 2 servicios buenos. Paredes enchapadas con azulejos muy buena calidad, cocina enchapada piso a cielo, transformador. Áreas de juegos para niños. Edificios de 1 a 2 plantas."
+    },
+    {
+      "codigo": "RE04",
+      "vidaUtil": 120,
+      "paredes": "alta_ladrillo_vidrio",
+      "cubierta": "teja_pendiente_pronunciada",
+      "cielo": "artesonado_laqueado",
+      "pisos": "ceramica_excelente_parquet",
+      "banos": 4,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bloques de concreto, láminas estructurales con poliestireno, repello tipo colonial, alturas 3,50 m o más. 2+ baños muy buenos por planta. Diseño elegante de fachada, banquinas y cornisas en concreto armado, hornos con ladrillo refractario. Edificios hasta 3 plantas."
+    }
+  ],
+  "CABINA": [
+    {
+      "codigo": "CB01",
+      "vidaUtil": 30,
+      "paredes": "bambu_mortero",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "artesonado_biselada",
+      "pisos": "madera_tabloncillo_bueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Bambú sobre basas/zócalos de concreto, entramado de bambú con estructura de madera. Paredes de bambú entrelazado con caña brava. Piso de madera, piedra laja en baño. 1 baño bueno externo con eco-inodoro. Diseño variado, posible mezzanine, cocina compartida, energía solar."
+    },
+    {
+      "codigo": "CB02",
+      "vidaUtil": 45,
+      "paredes": "contenedor_economico",
+      "cubierta": "sin_tratamiento",
+      "cielo": "yeso_aislante",
+      "pisos": "vinil_economico",
+      "banos": 0,
+      "areaMin": 13,
+      "areaMax": 29,
+      "etiqueta": "Contenedor reciclado, pintura epóxica exterior, aislante térmico interior. Sin tratamiento de cubierta. Piso metal con madera laminada o vinílicos. Sin baños (uso como oficina en desarrollos residenciales). Fachada plana sencilla sin ventanas. Un solo módulo/contenedor."
+    },
+    {
+      "codigo": "CB03",
+      "vidaUtil": 45,
+      "paredes": "contenedor_bueno",
+      "cubierta": "sin_tratamiento",
+      "cielo": "yeso_aislante",
+      "pisos": "ceramica_media",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Contenedores reciclados, divisiones internas de madera. Piso concreto con cerámica o madera laminada. 1 baño bueno con ducha y eco-inodoro. Aire acondicionado y ventilador alta gama, puertas/ventanales corredizos en aluminio, conexión WiFi."
+    },
+    {
+      "codigo": "CB04",
+      "vidaUtil": 50,
+      "paredes": "economica",
+      "cubierta": "igual_a_paredes",
+      "cielo": "yeso_similar",
+      "pisos": "tablon_cascote",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Estructuras con varillas de acero, malla electrosoldada, cedazo y mortero lanzado. Paredes, cubierta y cielos en mortero lanzado sobre estructura metálica (un solo elemento continuo). Piso concreto lujado con pintura y figuras. 1-3 baños buenos según habitaciones. Diseños orgánicos imitando naturaleza, cabina de una planta."
+    },
+    {
+      "codigo": "CB05",
+      "vidaUtil": 50,
+      "paredes": "economica",
+      "cubierta": "igual_a_paredes",
+      "cielo": "yeso_similar",
+      "pisos": "vinilico_teca",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Tubería de concreto reforzado con armadura de acero, diámetro 2,44 m. Paredes/cubierta/cielo forman parte de la tubería. Piso de plataforma de madera sobre la tubería. Batería de baño buena, externa y compartida. Compuesta por uno, dos o tres tubos en triángulo."
+    },
+    {
+      "codigo": "CB06",
+      "vidaUtil": 55,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "yeso_similar",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería integral o prefabricada. Bloques de concreto con repello quemado, alturas de 2,40 m. Cielos en láminas de yeso. Piso cerámica mediana calidad. 1 baño normal por cabina. Fachada sencilla, ventanas con marcos de aluminio anodizado. Cabinas de 1 a 2 plantas."
+    },
+    {
+      "codigo": "CB07",
+      "vidaUtil": 60,
+      "paredes": "regular_fachaleta",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "artesonado_biselada",
+      "pisos": "porcelanato_medio",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería integral o perfiles metálicos. Bloques de concreto repello fino. Cubierta con pendientes medianas, láminas esmaltadas. Cielos con tablilla/artesonado mediana calidad. Piso cerámica mediana calidad. 1 baño normal por cabina. Sala, comedor, cocina con desayunador, 2 dormitorios."
+    },
+    {
+      "codigo": "CB08",
+      "vidaUtil": 70,
+      "paredes": "regular_fachaleta",
+      "cubierta": "teja_galvanizado_dos_cuatro_aguas",
+      "cielo": "artesonado_biselada",
+      "pisos": "porcelanato_bueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería integral o perfiles metálicos. Bloques de concreto repello fino. Cubierta con teja de hierro galvanizado esmaltado. Piso cerámica buena calidad. 1 baño bueno por cabina. Sala, comedor, cocina con desayunador, 2 dormitorios, agua caliente, terraza."
+    },
+    {
+      "codigo": "CB09",
+      "vidaUtil": 70,
+      "paredes": "buena_fachaleta_enchape",
+      "cubierta": "teja_galvanizado_dos_cuatro_aguas",
+      "cielo": "pvc_yeso",
+      "pisos": "ceramica_media",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería de bloques de concreto y tapichel de madera fina. Cubierta a dos aguas tipo teja, sin canoas. Cielos con artesonado en madera fina, tapichel y aleros. Piso cerámica o porcelanato. 1 baño normal. Alturas dobles, marcos de madera/aluminio, WiFi. Cabinas de 1 a 2 plantas."
+    },
+    {
+      "codigo": "CB10",
+      "vidaUtil": 105,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "teja_galvanizado_dos_cuatro_aguas",
+      "cielo": "pvc_yeso",
+      "pisos": "porcelanato_bueno",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería integral. Bloques de concreto con puertas/ventanales corredizos de vidrio fijo en aluminio anodizado. Altura 2,30 m o más. Cubierta en aluminio tipo teja. Piso porcelanato. 1 baño muy bueno con ducha enchapada. Instalación eléctrica difusa, WiFi, mueble de cocina en madera contrachapada."
+    }
+  ],
+  "BODEGA": [
+    {
+      "codigo": "BO01",
+      "vidaUtil": 40,
+      "paredes": "contenedor_economico",
+      "cubierta": "sin_tratamiento",
+      "cielo": "no_especificado",
+      "pisos": "vinilico_teca",
+      "banos": 0,
+      "areaMin": 13,
+      "areaMax": 29,
+      "etiqueta": "Contenedores reciclados sobre cimientos elevados. Pintura epóxica exterior. Sin cielos, sin entrepiso. Piso de madera laminada. Sin baños. Almacenaje de productos, uno o varios contenedores, portón metálico."
+    },
+    {
+      "codigo": "BO02",
+      "vidaUtil": 70,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 100,
+      "areaMax": 300,
+      "etiqueta": "Columnas y vigas de concreto armado o perfiles metálicos. Bloques de concreto sisados, láminas de hierro galvanizado tipo canaleta, alturas de 6,00 a 10,00 m. Sin cielos. Piso concreto armado doble malla, acabado lujado. 1 baño normal. Portones metálicos. Área 100–300 m²."
+    },
+    {
+      "codigo": "BO03",
+      "vidaUtil": 80,
+      "paredes": "economica",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 300,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de perfiles metálicos. Bloques de concreto o prefabricado, alturas de 13,50 m. Láminas aislantes esmaltadas con aislante térmico. Sin cielos. Piso losa diseño especial para cargas pesadas. 1 baño bueno. Portones metálicos, posible mezzanine, luces espaciadas cada 15-20 m. Área desde 300 m²."
+    }
+  ],
+  "NAVE": [
+    {
+      "codigo": "NA01",
+      "vidaUtil": 80,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de perfiles metálicos. Paredes en láminas onduladas de hierro galvanizado, alturas de 3,00 m o más. Sin cielos. Piso concreto armado con malla, acabado lujado. 1 batería de baño económica. Construcciones sencillas, materiales económicos, portones de madera."
+    },
+    {
+      "codigo": "NA02",
+      "vidaUtil": 90,
+      "paredes": "regular_fachaleta",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de perfiles metálicos alma abierta/llena. Zócalo de concreto hasta 1,80 m, resto láminas galvanizadas tipo canaleta, alturas de 6,00 m o más. Sin cielos. Piso concreto armado con malla, acabado lujado. 1 batería normal. Oficina, portones metálicos."
+    },
+    {
+      "codigo": "NA03",
+      "vidaUtil": 95,
+      "paredes": "regular_fachaleta",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas perfiles metálicos alma abierta/llena. Zócalo hasta 1,80 m, resto canaleta estructural, alturas de 8,00 m o más. Piso concreto armado malla de acero 30 cm. 2 baterías normales. Oficina, portones metálicos."
+    },
+    {
+      "codigo": "NA04",
+      "vidaUtil": 105,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas perfiles metálicos alma abierta/llena. Bloques de concreto repello fino, alturas de 12,00 m o más. Piso concreto armado malla 30 cm. 2 baterías buenas. Oficina, portones metálicos, planta eléctrica de emergencia, líneas de frío."
+    },
+    {
+      "codigo": "NA05",
+      "vidaUtil": 120,
+      "paredes": "buena_amplia_altura",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de concreto armado prefabricadas. Baldosas prefabricadas, alturas de 16,00 m o más. Piso concreto armado malla 30 cm. 2 baterías muy buenas. Oficina, portones metálicos, planta eléctrica, posible sótano de estacionamiento y ascensor."
+    }
+  ],
+  "GALERÓN": [
+    {
+      "codigo": "GA01",
+      "vidaUtil": 40,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_sincanoas",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 0,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de madera rolliza. Láminas onduladas de hierro galvanizado y/o tablones de madera, sin repellar ni pintar, alturas de 3,00 m o más. Sin cielos, sin pisos, sin baños. Almacenaje de productos agrícolas y herramientas, portón de madera."
+    },
+    {
+      "codigo": "GA02",
+      "vidaUtil": 70,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_sincanoas",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 0,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de metal. Láminas de hierro estructural, posible zócalo de concreto, alturas de 3,00 m o más. Sin cielos. Piso concreto armado con malla, acabado lujado. Sin baños. Portones y puertas corredizas de metal."
+    },
+    {
+      "codigo": "GA03",
+      "vidaUtil": 80,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "no_especificado",
+      "pisos": "no_especificado",
+      "banos": 0,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Mampostería integral o prefabricado. Bloques de concreto, baldosas prefabricadas con repello quemado, pintura económica, alturas de 3,00 m o más. Sin cielos (en algunos casos puede presentar). Piso concreto armado con malla, acabado lujado. Sin baños. Portones metálicos corredizos."
+    }
+  ],
+  "CASA CLUB": [
+    {
+      "codigo": "CL01",
+      "vidaUtil": 70,
+      "paredes": "economica",
+      "cubierta": "lamina_galvanizada_canoas",
+      "cielo": "no_especificado",
+      "pisos": "ceramica_economica",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Vigas y columnas de concreto o acero. Mampostería integral o prefabricado con repello fino. Sin cielos, sin entrepiso. Piso concreto lujado o cerámica económica. 1 batería normal. Diseñada para reuniones sociales comunitarias o centros recreativos. Rampas, sistema contra incendio. De una planta."
+    },
+    {
+      "codigo": "CL02",
+      "vidaUtil": 105,
+      "paredes": "buena_sectores_vidrio",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "pvc_artesonado",
+      "pisos": "porcelanato_bueno",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de concreto armado/mampostería/perfiles metálicos. Muros de concreto, amplios sectores de vidrio y fachaletas, alturas dobles. Cielos con artesonados de buena calidad. Piso cerámica/porcelanato buena calidad. Baterías buenas en áreas comunes + baños buenos en oficinas. Vestíbulo, salas de conferencias, bar, restaurante, ascensores."
+    },
+    {
+      "codigo": "CL03",
+      "vidaUtil": 120,
+      "paredes": "alta_ladrillo_vidrio",
+      "cubierta": "diseno_especial_bovedas",
+      "cielo": "artesonado_laqueado",
+      "pisos": "porcelanato_muybueno",
+      "banos": 2,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas y vigas de concreto armado/mampostería/perfiles metálicos. Muros de concreto con láminas y tablacemento, amplios sectores de vidrio. Cubierta con bóvedas, domos. Piso cerámica importada/porcelanato buena calidad, alfombras buena calidad. Baterías muy buenas comunes + baños buenos oficinas. Puede incluir piscina interna (valorada por aparte)."
+    }
+  ],
+  "RANCHO BBQ": [
+    {
+      "codigo": "IQ01",
+      "vidaUtil": 40,
+      "paredes": "no_especificado",
+      "cubierta": "lamina_galvanizada_sincanoas",
+      "cielo": "no_especificado",
+      "pisos": "tablon_cascote",
+      "banos": 0,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Estructura base y de techo de madera. Sin cielo raso, cubierta de hierro galvanizado con algunas láminas plásticas de fibra de vidrio. Piso de concreto lujado o planchado. Parrilla en ladrillo económico, posible fregadero económico. Valor ¢230.000/m²."
+    },
+    {
+      "codigo": "IQ02",
+      "vidaUtil": 70,
+      "paredes": "regular_fachaleta",
+      "cubierta": "esmaltada_imitacion_teja",
+      "cielo": "no_especificado",
+      "pisos": "tabloncillo_terrazo",
+      "banos": 0,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas de ladrillo o concreto con enchapes de loseta de barro. Estructura de techo de madera o perfiles metálicos. Cubierta con lámina esmaltada o teja de concreto pigmentada. Chimenea con extractor y parrilla de ladrillo corriente. Mueble con sobre de concreto y azulejo, fregadero metálico. Valor ¢335.000/m²."
+    },
+    {
+      "codigo": "IQ03",
+      "vidaUtil": 120,
+      "paredes": "buena_fachaleta_enchape",
+      "cubierta": "diseno_especial_domos",
+      "cielo": "artesonado_biselada",
+      "pisos": "ceramica_excelente_parquet",
+      "banos": 1,
+      "areaMin": 0,
+      "areaMax": 9999,
+      "etiqueta": "Columnas de ladrillo o concreto con enchapes de loseta de barro, cerámica o azulejo, cielo artesonado. Cubierta alterna de lámina esmaltada o teja pigmentada con domos o láminas acrílicas. Chimenea con extractor, parrilla de ladrillo refractario. Mueble de concreto enchapado con cerámica buena calidad, fregadero doble metálico, bar y alacena en maderas finas. Piso de cerámica importada. Puede tener un baño. Valor ¢460.000/m²."
+    }
+  ]
+}

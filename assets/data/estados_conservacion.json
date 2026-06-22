@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "nombre": "Óptimo (O)",
+    "coef": 0,
+    "color": "#1B5E34",
+    "desc": "Edificación nueva, sin daños en estructura o acabados. No ha requerido reparaciones de ningún tipo."
+  },
+  {
+    "id": 2,
+    "nombre": "Muy Bueno (MB)",
+    "coef": 0.32,
+    "color": "#2E7D4F",
+    "desc": "Labores normales de mantenimiento total o parcial en acabados: repellos, pintura, reparación de ventanas, rodapiés."
+  },
+  {
+    "id": 3,
+    "nombre": "Bueno (B)",
+    "coef": 2.52,
+    "color": "#558B2F",
+    "desc": "Acabados sustituidos totalmente: guarniciones, marcos, ventanas, puertas, rodapiés, grifería, loza sanitaria."
+  },
+  {
+    "id": 4,
+    "nombre": "Intermedio (I)",
+    "coef": 8.09,
+    "color": "#F9A825",
+    "desc": "Sustituciones parciales en estructuras secundarias: cielos, algunas paredes, cubierta, canoas, bajantes, parte del sistema electromecánico."
+  },
+  {
+    "id": 5,
+    "nombre": "Regular (R)",
+    "coef": 18.1,
+    "color": "#FB8C00",
+    "desc": "Sustituciones totales en estructuras secundarias: cielos, pisos, paredes, cubierta, canoas, bajantes, sistema electromecánico."
+  },
+  {
+    "id": 6,
+    "nombre": "Deficiente (D)",
+    "coef": 32.2,
+    "color": "#EF6C00",
+    "desc": "Sustituciones parciales en estructuras primarias: cimientos, entrepisos, muros de carga, columnas, vigas y cerchas."
+  },
+  {
+    "id": 7,
+    "nombre": "Malo (M)",
+    "coef": 52.6,
+    "color": "#D84315",
+    "desc": "Sustituciones en gran parte de estructuras primarias: entrepisos, muros de carga, columnas, vigas y cerchas."
+  },
+  {
+    "id": 8,
+    "nombre": "Muy Malo (MM)",
+    "coef": 75.32,
+    "color": "#C62828",
+    "desc": "Sustituciones en estructuras primarias y secundarias en casi la totalidad de la edificación."
+  },
+  {
+    "id": 9,
+    "nombre": "Demolición (DM)",
+    "coef": 100,
+    "color": "#6D1B1B",
+    "desc": "Edificación sin valor, requiere demolición."
+  }
+]

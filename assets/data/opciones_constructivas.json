@@ -1,0 +1,322 @@
+{
+  "paredes": [
+    {
+      "valor": "economica",
+      "texto": "Bloques de concreto/baldosas básicas, pintura económica, sin fachaleta"
+    },
+    {
+      "valor": "economica_fachaleta",
+      "texto": "Bloques de concreto, pintura económica, fachaleta en algunas áreas"
+    },
+    {
+      "valor": "regular_fachaleta",
+      "texto": "Bloques de concreto, repello afinado, pintura regular, fachaleta parcial"
+    },
+    {
+      "valor": "buena_fachaleta_enchape",
+      "texto": "Bloques de concreto, repello afinado, fachaleta y/o enchapes, pintura regular-buena"
+    },
+    {
+      "valor": "buena_enmasillado",
+      "texto": "Repello afinado enmasillado, pintura de buena calidad, fachaleta/enchapes"
+    },
+    {
+      "valor": "buena_sectores_vidrio",
+      "texto": "Repello fino enmasillado, pintura buena, sectores de vidrio, fachaleta"
+    },
+    {
+      "valor": "buena_amplia_altura",
+      "texto": "Bloques de concreto, pintura buena calidad, alturas de 3,00 a 5,00 m"
+    },
+    {
+      "valor": "alta_ladrillo_vidrio",
+      "texto": "Concreto/ladrillo/mixto, amplios sectores de vidrio, pintura alta calidad"
+    },
+    {
+      "valor": "lujo_marmol_estuco",
+      "texto": "Ladrillo, enchapes de maderas finas, mármol, estuco de muy buena calidad"
+    },
+    {
+      "valor": "lujo_excelente_vidrio_piso_cielo",
+      "texto": "Paredes de vidrio piso a cielo, enchapes de maderas finas/mármol excelente calidad"
+    },
+    {
+      "valor": "vidrio_muro_cortina",
+      "texto": "Vidrio templado en muros cortina, piel de vidrio, aluminio compuesto"
+    },
+    {
+      "valor": "muroseco_economico",
+      "texto": "Muro seco (láminas de yeso/cemento/fibra de vidrio), pintura regular calidad"
+    },
+    {
+      "valor": "muroseco_bueno",
+      "texto": "Muro seco con malla de refuerzo y mortero, pintura de buena calidad"
+    },
+    {
+      "valor": "contenedor_economico",
+      "texto": "Contenedor reciclado, pintura epóxica exterior, un solo módulo"
+    },
+    {
+      "valor": "contenedor_bueno",
+      "texto": "Contenedores reciclados combinados, varios módulos unidos"
+    },
+    {
+      "valor": "ensamblada_bandeja_metalica",
+      "texto": "Bandeja metálica ondulada con repello, sistema prefabricado modular"
+    },
+    {
+      "valor": "concreto_ladrillo_fachaleta",
+      "texto": "Concreto/ladrillo con fachaletas, alturas de 3,50 m o más (espacio tipo loft)"
+    },
+    {
+      "valor": "metalica_vidrio_yeso",
+      "texto": "Estructura metálica con láminas de vidrio o yeso (forma especial/pirámide)"
+    },
+    {
+      "valor": "madera_unforro",
+      "texto": "Madera con un solo forro de tabla, sencilla"
+    },
+    {
+      "valor": "madera_dobleforro_biselada",
+      "texto": "Madera con doble forro en tablilla biselada, calidad regular"
+    },
+    {
+      "valor": "madera_dobleforro_buena",
+      "texto": "Madera con doble forro en tablilla biselada de buena calidad (laurel, ciprés)"
+    },
+    {
+      "valor": "madera_dobleforro_muybuena",
+      "texto": "Madera con doble forro en tablilla biselada de muy buena calidad"
+    },
+    {
+      "valor": "bambu_mortero",
+      "texto": "Bambú recubierto con mortero"
+    },
+    {
+      "valor": "adobe_barro",
+      "texto": "Bloques de adobe (barro arcilloso)"
+    },
+    {
+      "valor": "bahareque_cana",
+      "texto": "Caña brava horizontal (bahareque)"
+    },
+    {
+      "valor": "no_especificado",
+      "texto": "No estoy seguro / no aplica claramente"
+    }
+  ],
+  "cubierta": [
+    {
+      "valor": "lamina_galvanizada",
+      "texto": "Láminas onduladas de hierro galvanizado simple"
+    },
+    {
+      "valor": "lamina_galvanizada_sincanoas",
+      "texto": "Láminas galvanizadas sin canoas ni bajantes"
+    },
+    {
+      "valor": "lamina_galvanizada_canoas",
+      "texto": "Láminas galvanizadas con canoas y bajantes"
+    },
+    {
+      "valor": "lamina_estructural",
+      "texto": "Láminas estructurales con poliestireno"
+    },
+    {
+      "valor": "esmaltada_imitacion_teja",
+      "texto": "Láminas esmaltadas/acero estructural, imitación teja"
+    },
+    {
+      "valor": "teja_barro_asfaltica",
+      "texto": "Teja de barro o asfáltica"
+    },
+    {
+      "valor": "teja_pendiente_pronunciada",
+      "texto": "Teja con pendientes pronunciadas, diseños especiales"
+    },
+    {
+      "valor": "diseno_especial_bovedas",
+      "texto": "Diseño especial con bóvedas o mariposa"
+    },
+    {
+      "valor": "diseno_especial_capas_vegetales",
+      "texto": "Losas de cubierta con capas vegetales, domos"
+    },
+    {
+      "valor": "diseno_especial_domos",
+      "texto": "Domos, estructuras especiales coladas en sitio"
+    },
+    {
+      "valor": "teja_barro_mariposa",
+      "texto": "Teja de barro, pendientes tipo mariposa"
+    },
+    {
+      "valor": "sin_tratamiento",
+      "texto": "Sin tratamiento (parte superior del contenedor)"
+    },
+    {
+      "valor": "lamina_galvanizada_mariposa",
+      "texto": "Láminas galvanizadas con pendiente mínima o mariposa"
+    },
+    {
+      "valor": "bandeja_metalica_reticulada",
+      "texto": "Bandeja metálica reticulada de una pendiente"
+    },
+    {
+      "valor": "lamina_pendiente_pronunciada",
+      "texto": "Láminas con pendientes pronunciadas (tipo loft)"
+    },
+    {
+      "valor": "igual_a_paredes",
+      "texto": "Mismo material que las paredes (forma piramidal)"
+    },
+    {
+      "valor": "teja_galvanizado_dos_cuatro_aguas",
+      "texto": "Teja/hierro galvanizado a dos y cuatro aguas"
+    },
+    {
+      "valor": "teja_barro_altas_gradientes",
+      "texto": "Teja de barro con altas gradientes, dos o más aguas"
+    },
+    {
+      "valor": "no_especificado",
+      "texto": "No estoy seguro / no aplica claramente"
+    }
+  ],
+  "cielo": [
+    {
+      "valor": "pvc_parcial_sin",
+      "texto": "Tablilla PVC parcial o sin cielo"
+    },
+    {
+      "valor": "pvc_yeso",
+      "texto": "Tablilla PVC o láminas de yeso/cemento/fibra de vidrio"
+    },
+    {
+      "valor": "pvc_artesonado",
+      "texto": "Tablilla PVC con algunos artesonados de buena calidad"
+    },
+    {
+      "valor": "pvc_artesonado_fino",
+      "texto": "Artesonados finos, tablilla de muy buena calidad"
+    },
+    {
+      "valor": "artesonado_laqueado",
+      "texto": "Artesonados laqueados de maderas finas"
+    },
+    {
+      "valor": "artesonado_lujo",
+      "texto": "Artesonados de lujo en maderas finas"
+    },
+    {
+      "valor": "artesonado_excelencia",
+      "texto": "Artesonados de excelencia (cristóbal, cúpulas, bóvedas con nervaduras)"
+    },
+    {
+      "valor": "acero_expuesto",
+      "texto": "Estructura de acero expuesto con láminas de yeso"
+    },
+    {
+      "valor": "yeso_aislante",
+      "texto": "Láminas de yeso con aislante térmico"
+    },
+    {
+      "valor": "yeso_similar",
+      "texto": "Láminas de yeso, cemento y fibra de vidrio similar"
+    },
+    {
+      "valor": "pvc_yeso_funcional",
+      "texto": "PVC o yeso que también funciona como pared interna"
+    },
+    {
+      "valor": "tabla_aglomerada",
+      "texto": "Tabla o madera aglomerada"
+    },
+    {
+      "valor": "pvc_biselada",
+      "texto": "Tablilla PVC o biselada de regular calidad"
+    },
+    {
+      "valor": "artesonado_biselada",
+      "texto": "Artesonados o tablilla biselada de buena calidad"
+    },
+    {
+      "valor": "artesonado_almendro",
+      "texto": "Artesonado y tablilla de almendro o similar"
+    },
+    {
+      "valor": "no_especificado",
+      "texto": "No estoy seguro / no aplica claramente"
+    }
+  ],
+  "pisos": [
+    {
+      "valor": "ceramica_economica",
+      "texto": "Cerámica económica o concreto con acabado lujado"
+    },
+    {
+      "valor": "terrazo_mosaico",
+      "texto": "Terrazo, cerámica económica o mosaico"
+    },
+    {
+      "valor": "porcelanato_medio",
+      "texto": "Porcelanato/terrazo/mosaico/cerámica de mediana calidad"
+    },
+    {
+      "valor": "porcelanato_bueno",
+      "texto": "Porcelanato y cerámica de buena calidad"
+    },
+    {
+      "valor": "porcelanato_muybueno",
+      "texto": "Porcelanato y cerámica de muy buena calidad"
+    },
+    {
+      "valor": "marmol_lujo",
+      "texto": "Mármol, porcelanato de alta resistencia, maderas finas"
+    },
+    {
+      "valor": "marmol_excelencia",
+      "texto": "Mármol, porcelanato importado, maderas finas (cristóbal, almendro)"
+    },
+    {
+      "valor": "vinil_economico",
+      "texto": "Loseta de vinil, madera laminada o cerámica básica"
+    },
+    {
+      "valor": "vinil_bueno",
+      "texto": "Loseta de vinil/madera laminada, porcelanato/cerámica buena calidad"
+    },
+    {
+      "valor": "vinilico_teca",
+      "texto": "Acabados vinílicos o madera de teca"
+    },
+    {
+      "valor": "madera_porcelanato_bueno",
+      "texto": "Madera laminada y/o porcelanato de buena calidad"
+    },
+    {
+      "valor": "tablon_cascote",
+      "texto": "Tablón semiduro, cascote o mosaico"
+    },
+    {
+      "valor": "tabloncillo_terrazo",
+      "texto": "Tabloncillo o contrapiso con terrazo sencillo/mosaico"
+    },
+    {
+      "valor": "madera_tabloncillo_bueno",
+      "texto": "Madera tabloncillo machihembrado, terrazo, mosaico artesanal"
+    },
+    {
+      "valor": "ceramica_excelente_parquet",
+      "texto": "Cerámica excelente calidad, parquet de almendro"
+    },
+    {
+      "valor": "ceramica_media",
+      "texto": "Cerámica o porcelanato de mediana calidad"
+    },
+    {
+      "valor": "no_especificado",
+      "texto": "No estoy seguro / no aplica claramente"
+    }
+  ]
+}

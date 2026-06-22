@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Tipologías y Depreciación · Bienes Inmuebles San Carlos</title>
+<link rel="stylesheet" href="assets/css/styles.css" type="">
+</head>
+<body>
+
+<div class="contenedor">
+
+  <header>
+    <h1>Calculadora de Tipologías Constructivas y Depreciación</h1>
+    <p>Departamento de Bienes Inmuebles · Municipalidad de San Carlos · Manual ONT 2023 · Método Ross-Heidecke</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-btn activo" onclick="cambiarTab('terreno')">1. Valoración de Terreno</button>
+    <button class="tab-btn" onclick="cambiarTab('asistente')">2. Asistente de Tipificación</button>
+    <button class="tab-btn" onclick="cambiarTab('clasificador')">3. Clasificador por Código</button>
+    <button class="tab-btn" onclick="cambiarTab('depreciacion')">4. Calculadora de Depreciación</button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- PANEL 0: VALORACIÓN DE TERRENO POR ZONAS HOMOGÉNEAS           -->
+  <!-- ============================================================ -->
+  <div id="panel-terreno" class="panel activo">
+    <h2>Valoración de terreno por Zonas Homogéneas</h2>
+    <p class="subt">Seleccione el distrito y la zona homogénea oficial. Luego ingrese las características reales del lote — el sistema las compara contra los valores fijos de la matriz ONT para calcular los factores de ajuste, igual que la plantilla oficial de la Oficina de Valoraciones.</p>
+
+    <div class="grid-form" style="grid-template-columns:1fr 1fr;">
+      <div class="campo">
+        <label for="terr-distrito">Distrito</label>
+        <select id="terr-distrito" onchange="cargarZonasDistrito()">
+          <option value="">— Seleccione el distrito —</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="terr-zona">Zona homogénea</label>
+        <select id="terr-zona" onchange="mostrarDatosZona()" disabled>
+          <option value="">— Primero seleccione un distrito —</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="terr-datos-zona"></div>
+
+    <div id="terr-form-lote" style="display:none;">
+      <h3 class="subtitulo-seccion">Características reales del lote</h3>
+
+      <div class="grid-form" style="grid-template-columns:1fr 1fr 1fr;">
+        <div class="campo">
+          <label for="terr-area-lote">Área del lote (m²)</label>
+          <input type="number" id="terr-area-lote" placeholder="Ej: 250" min="0.01" step="0.01" oninput="calcularValorTerreno()">
+          <span class="ayuda">Determina si el lote se valora como urbano (&lt;5000 m²) o rural (≥5000 m²)</span>
+        </div>
+        <div class="campo">
+          <label for="terr-frente-lote">Frente del lote (m)</label>
+          <input type="number" id="terr-frente-lote" placeholder="Ej: 12" min="0.01" step="0.01" oninput="calcularValorTerreno()">
+        </div>
+        <div class="campo">
+          <label for="terr-pendiente-lote">Pendiente del lote (%)</label>
+          <input type="number" id="terr-pendiente-lote" placeholder="Ej: 10" min="0" step="0.1" oninput="calcularValorTerreno()">
+        </div>
+      </div>
+
+      <div class="grid-form" style="grid-template-columns:1fr 1fr 1fr;">
+        <div class="campo">
+          <label for="terr-regularidad-lote">Regularidad del lote</label>
+          <select id="terr-regularidad-lote" onchange="calcularValorTerreno()">
+            <option value="1">1 — Regular</option>
+            <option value="0.95">0.95</option>
+            <option value="0.9">0.90</option>
+            <option value="0.85">0.85</option>
+            <option value="0.8">0.80</option>
+            <option value="0.75">0.75</option>
+            <option value="0.7">0.70 — Muy irregular</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="terr-via-lote">Tipo de vía del lote</label>
+          <select id="terr-via-lote" onchange="calcularValorTerreno()"></select>
+        </div>
+        <div class="campo">
+          <label for="terr-servicios2-lote">Servicios (2): cañería / electricidad / teléfono / alumbrado</label>
+          <select id="terr-servicios2-lote" onchange="calcularValorTerreno()"></select>
+        </div>
+      </div>
+
+      <div id="terr-campos-urbanos" class="grid-form" style="grid-template-columns:1fr 1fr 1fr;">
+        <div class="campo">
+          <label for="terr-nivel-lote">Nivel del lote (m, respecto a calle)</label>
+          <input type="number" id="terr-nivel-lote" placeholder="0 = mismo nivel" step="0.1" oninput="calcularValorTerreno()">
+          <span class="ayuda">Positivo si está más alto que la calle, negativo si más bajo. Solo aplica a lotes urbanos (&lt;5000 m²)</span>
+        </div>
+        <div class="campo">
+          <label for="terr-ubicacion-lote">Ubicación del lote</label>
+          <select id="terr-ubicacion-lote" onchange="calcularValorTerreno()"></select>
+        </div>
+        <div class="campo">
+          <label for="terr-servicios1-lote">Servicios (1): acera / cordón y caño</label>
+          <select id="terr-servicios1-lote" onchange="calcularValorTerreno()"></select>
+        </div>
+      </div>
+
+      <div id="terr-campos-rurales" class="grid-form" style="grid-template-columns:1fr 1fr;">
+        <div class="campo">
+          <label for="terr-suelo-lote">Calidad del suelo</label>
+          <select id="terr-suelo-lote" onchange="calcularValorTerreno()"></select>
+          <span class="ayuda">Solo aplica a lotes rurales (≥5000 m²)</span>
+        </div>
+        <div class="campo">
+          <label for="terr-hidrologia-lote">Hidrología</label>
+          <select id="terr-hidrologia-lote" onchange="calcularValorTerreno()"></select>
+        </div>
+      </div>
+    </div>
+
+    <div id="terr-resultado" class="resultado">
+      <div class="resultado-header">Valor de terreno calculado</div>
+      <div class="resultado-body" id="terr-resultado-body"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- PANEL 0bis: ASISTENTE DE TIPIFICACIÓN (por características)   -->
+  <!-- ============================================================ -->
+  <div id="panel-asistente" class="panel">
+    <h2>Asistente de tipificación por características</h2>
+    <p class="subt">Marque las características que le describa el propietario (materiales de paredes, cubierta, pisos, baños, área). La herramienta compara sus respuestas contra las descripciones oficiales del Manual ONT 2023 y sugiere la tipología con mayor coincidencia.</p>
+
+    <div class="grid-form" style="grid-template-columns:1fr;">
+      <div class="campo">
+        <label for="asis-familia">¿Qué tipo de construcción es?</label>
+        <select id="asis-familia" onchange="generarPreguntasAsistente()">
+          <option value="">— Seleccione el tipo de construcción —</option>
+        </select>
+        <span class="ayuda">Si el propietario describe una vivienda, seleccione "Vivienda" y luego indique el material principal</span>
+      </div>
+    </div>
+
+    <div id="asis-preguntas"></div>
+
+    <div id="asis-resultado" class="resultado">
+      <div class="resultado-header">Tipología sugerida</div>
+      <div class="resultado-body" id="asis-resultado-body"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- PANEL 1: CLASIFICADOR DE TIPOLOGÍA                            -->
+  <!-- ============================================================ -->
+  <div id="panel-clasificador" class="panel">
+    <h2>Encontrar la tipología correspondiente</h2>
+    <p class="subt">Seleccione el tipo de construcción y el nivel de acabados observado. La herramienta sugiere el código ONT más cercano según el Manual de Valores Base Unitarios 2023.</p>
+
+    <div class="grid-form">
+      <div class="campo">
+        <label for="tipo-construccion">Tipo de construcción</label>
+        <select id="tipo-construccion" onchange="actualizarNiveles()">
+          <option value="">— Seleccione —</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="nivel-acabado">Nivel de acabados / calidad</label>
+        <select id="nivel-acabado">
+          <option value="">— Primero seleccione el tipo —</option>
+        </select>
+        <span class="ayuda">Compare los acabados observados con la descripción del manual</span>
+      </div>
+
+      <div class="campo">
+        <label for="area-construida">Área construida (m²)</label>
+        <input type="number" id="area-construida" placeholder="Ej: 145" min="0" step="0.01">
+      </div>
+
+      <div class="campo">
+        <label for="anio-construccion">Año de construcción (declarado)</label>
+        <input type="number" id="anio-construccion" placeholder="Ej: 2015" min="1900" max="2026">
+      </div>
+    </div>
+
+    <button class="btn-principal" onclick="clasificarTipologia()">Buscar tipología</button>
+
+    <div id="resultado-clasificador" class="resultado">
+      <div class="resultado-header" id="rc-header">Resultado</div>
+      <div class="resultado-body" id="rc-body"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- PANEL 2: CALCULADORA DE DEPRECIACIÓN ROSS-HEIDECKE            -->
+  <!-- ============================================================ -->
+  <div id="panel-depreciacion" class="panel">
+    <h2>Depreciación por el método Ross-Heidecke</h2>
+    <p class="subt">Agregue cada construcción o componente del inmueble con su tipología, área, año de construcción y estado de conservación. El cálculo aplica la fórmula oficial de depreciación combinada por edad y estado.</p>
+
+    <div id="filas-construcciones" class="filas-construcciones"></div>
+
+    <button class="btn-secundario" onclick="agregarFila()">+ Agregar construcción</button>
+    <br>
+    <button class="btn-principal" onclick="calcularDepreciacion()">Calcular depreciación</button>
+
+    <div id="resultado-depreciacion" class="resultado">
+      <div class="resultado-header">Resultado de la depreciación</div>
+      <div class="resultado-body">
+        <table class="tabla-resultados" id="tabla-resultado-dep">
+          <thead>
+            <tr>
+              <th>Tipología</th>
+              <th>Área (m²)</th>
+              <th>Edad (años)</th>
+              <th>Estado</th>
+              <th>Valor Nuevo (₡)</th>
+              <th>Coef. Estado</th>
+              <th>Valor Actual (₡)</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla-dep"></tbody>
+        </table>
+
+        <div class="resumen-final">
+          <div class="resumen-card azul">
+            <div class="etiqueta">Valor de Reposición Total</div>
+            <div class="monto" id="resumen-vn">₡0</div>
+          </div>
+          <div class="resumen-card naranja">
+            <div class="etiqueta">Depreciación Total</div>
+            <div class="monto" id="resumen-dep">₡0</div>
+          </div>
+          <div class="resumen-card verde">
+            <div class="etiqueta">Valor Actual Depreciado</div>
+            <div class="monto" id="resumen-va">₡0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fundamento">
+      <strong>Fórmula aplicada (Ross-Heidecke, Manual ONT 2023):</strong> VA = Vn × [1 − ½·(x/n + (x/n)²)] × E, donde
+      Vn = valor de nuevo (costo de reposición), x = edad actual de la construcción, n = vida útil probable según tipología,
+      y E = factor de bueno por estado = (100 − coeficiente de depreciación) ÷ 100. Tabla de 9 estados de conservación
+      y coeficientes según la Tabla N°2 del Manual de Valores Base Unitarios por Tipología Constructiva 2023 (ONT,
+      Ministerio de Hacienda). Fórmula verificada reproduciendo al céntimo los ejemplos de cálculo del propio manual.
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/js/home.js"></script>
+
+</body>
+</html>

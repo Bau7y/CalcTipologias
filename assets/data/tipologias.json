@@ -1,0 +1,1432 @@
+{
+  "VIVIENDA DE CONCRETO": {
+    "niveles": [
+      {
+        "codigo": "VC01",
+        "nombre": "Económica básica (42–90 m²)",
+        "valor": 260000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "VC02",
+        "nombre": "Económica (80–110 m²)",
+        "valor": 320000,
+        "vidaUtil": 55
+      },
+      {
+        "codigo": "VC03",
+        "nombre": "Media baja (100–150 m²)",
+        "valor": 365000,
+        "vidaUtil": 65
+      },
+      {
+        "codigo": "VC04",
+        "nombre": "Media (140–220 m²)",
+        "valor": 425000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "VC05",
+        "nombre": "Media alta (210–250 m²)",
+        "valor": 485000,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "VC06",
+        "nombre": "Residencial (240–300 m²)",
+        "valor": 545000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "VC07",
+        "nombre": "Residencial alta (290–350 m²)",
+        "valor": 700000,
+        "vidaUtil": 120
+      },
+      {
+        "codigo": "VC08",
+        "nombre": "Lujo (340–400 m²)",
+        "valor": 920000,
+        "vidaUtil": 120
+      },
+      {
+        "codigo": "VC09",
+        "nombre": "Lujo alta (más de 390 m²)",
+        "valor": 1495000,
+        "vidaUtil": 120
+      },
+      {
+        "codigo": "VC10",
+        "nombre": "Premium exclusivo (más de 390 m²)",
+        "valor": 1835000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "VIVIENDA DE VIDRIO": {
+    "niveles": [
+      {
+        "codigo": "VV01",
+        "nombre": "Vivienda de vidrio (más de 390 m²)",
+        "valor": 1550000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "VIVIENDA DE MURO SECO": {
+    "niveles": [
+      {
+        "codigo": "VS01",
+        "nombre": "Económica (100–150 m²)",
+        "valor": 310000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "VS02",
+        "nombre": "Media alta (140 m² en adelante)",
+        "valor": 500000,
+        "vidaUtil": 60
+      }
+    ]
+  },
+  "VIVIENDA EN CONTENEDOR": {
+    "niveles": [
+      {
+        "codigo": "VR01",
+        "nombre": "Básica",
+        "valor": 285000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "VR02",
+        "nombre": "Media",
+        "valor": 355000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "VIVIENDA ENSAMBLADA": {
+    "niveles": [
+      {
+        "codigo": "VE01",
+        "nombre": "Prefabricada",
+        "valor": 550000,
+        "vidaUtil": 60
+      }
+    ]
+  },
+  "VIVIENDA LOFT": {
+    "niveles": [
+      {
+        "codigo": "VL01",
+        "nombre": "Vivienda loft (200–250 m²)",
+        "valor": 515000,
+        "vidaUtil": 115
+      }
+    ]
+  },
+  "VIVIENDA PIRÁMIDE": {
+    "niveles": [
+      {
+        "codigo": "VI01",
+        "nombre": "Pirámide / iglú (36–42 m²)",
+        "valor": 570000,
+        "vidaUtil": 70
+      }
+    ]
+  },
+  "VIVIENDA DE PLÁSTICO": {
+    "niveles": [
+      {
+        "codigo": "VP01",
+        "nombre": "Básica",
+        "valor": null,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "VP02",
+        "nombre": "Estándar (40–100 m²)",
+        "valor": null,
+        "vidaUtil": 90
+      }
+    ]
+  },
+  "VIVIENDA DE MADERA": {
+    "niveles": [
+      {
+        "codigo": "VM01",
+        "nombre": "Básica rústica",
+        "valor": 290000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "VM02",
+        "nombre": "Económica (80–150 m²)",
+        "valor": 425000,
+        "vidaUtil": 100
+      },
+      {
+        "codigo": "VM03",
+        "nombre": "Media (140–200 m²)",
+        "valor": 635000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "VM04",
+        "nombre": "Residencial (190–400 m²)",
+        "valor": 985000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "VIVIENDA DE BAMBÚ": {
+    "niveles": [
+      {
+        "codigo": "VB01",
+        "nombre": "Vivienda de bambú",
+        "valor": 140000,
+        "vidaUtil": 40
+      }
+    ]
+  },
+  "VIVIENDA DE ADOBE": {
+    "niveles": [
+      {
+        "codigo": "VA01",
+        "nombre": "Vivienda de adobe",
+        "valor": 155000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "VIVIENDA DE BAHAREQUE": {
+    "niveles": [
+      {
+        "codigo": "VH01",
+        "nombre": "Vivienda de bahareque (80–149 m²)",
+        "valor": 545000,
+        "vidaUtil": 45
+      }
+    ]
+  },
+  "CABAÑA": {
+    "niveles": [
+      {
+        "codigo": "CÑ01",
+        "nombre": "Cabaña tipo 1 (30–79 m²)",
+        "valor": 365000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "CÑ02",
+        "nombre": "Cabaña tipo 2 (80–149 m²)",
+        "valor": 475000,
+        "vidaUtil": 100
+      },
+      {
+        "codigo": "CÑ03",
+        "nombre": "Cabaña tipo 3 (150–300 m²)",
+        "valor": 545000,
+        "vidaUtil": 105
+      }
+    ]
+  },
+  "CHALET": {
+    "niveles": [
+      {
+        "codigo": "CH01",
+        "nombre": "Chalet tipo 1 (área promedio 42 m²)",
+        "valor": 365000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "CH02",
+        "nombre": "Chalet tipo 2 (64–100 m²)",
+        "valor": 435000,
+        "vidaUtil": 100
+      }
+    ]
+  },
+  "EDIFICIO DE APARTAMENTOS": {
+    "niveles": [
+      {
+        "codigo": "AP01",
+        "nombre": "Económico",
+        "valor": 395000,
+        "vidaUtil": 65
+      },
+      {
+        "codigo": "AP02",
+        "nombre": "Medio bajo",
+        "valor": 465000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "AP03",
+        "nombre": "Medio",
+        "valor": 605000,
+        "vidaUtil": 95
+      },
+      {
+        "codigo": "AP04",
+        "nombre": "Medio alto",
+        "valor": 705000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "AP05",
+        "nombre": "Residencial",
+        "valor": 885000,
+        "vidaUtil": 115
+      },
+      {
+        "codigo": "AP06",
+        "nombre": "Lujo",
+        "valor": 1080000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "HOGAR DE RETIRO": {
+    "niveles": [
+      {
+        "codigo": "HR01",
+        "nombre": "Básico",
+        "valor": 430000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "HR02",
+        "nombre": "Estándar",
+        "valor": 595000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "HR03",
+        "nombre": "Confort",
+        "valor": 810000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "LOCAL COMERCIAL": {
+    "niveles": [
+      {
+        "codigo": "LC01",
+        "nombre": "Básico",
+        "valor": 235000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "LC02",
+        "nombre": "Estándar",
+        "valor": 285000,
+        "vidaUtil": 75
+      },
+      {
+        "codigo": "LC03",
+        "nombre": "Medio",
+        "valor": 295000,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "LC04",
+        "nombre": "Medio alto",
+        "valor": 340000,
+        "vidaUtil": 95
+      },
+      {
+        "codigo": "LC05",
+        "nombre": "Alto",
+        "valor": 400000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "LC06",
+        "nombre": "Premium",
+        "valor": 470000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "EDIFICIO COMERCIAL": {
+    "niveles": [
+      {
+        "codigo": "EC01",
+        "nombre": "Básico",
+        "valor": 295000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "EC02",
+        "nombre": "Estándar",
+        "valor": 420000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "EC03",
+        "nombre": "Alto",
+        "valor": 570000,
+        "vidaUtil": 80
+      }
+    ]
+  },
+  "CENTRO COMERCIAL": {
+    "niveles": [
+      {
+        "codigo": "CC01",
+        "nombre": "Tipo 1",
+        "valor": 325000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CC02",
+        "nombre": "Tipo 2",
+        "valor": 420000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CC03",
+        "nombre": "Tipo 3",
+        "valor": 440000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CC04",
+        "nombre": "Tipo 4",
+        "valor": 455000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CC05",
+        "nombre": "Tipo 5",
+        "valor": 480000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CC06",
+        "nombre": "Tipo 6 — alto",
+        "valor": 495000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "EDIFICIO DE OFICINAS": {
+    "niveles": [
+      {
+        "codigo": "EO01",
+        "nombre": "Básico",
+        "valor": 400000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EO02",
+        "nombre": "Estándar",
+        "valor": 480000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EO03",
+        "nombre": "Medio",
+        "valor": 595000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EO04",
+        "nombre": "Corporativo",
+        "valor": 665000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EO05",
+        "nombre": "Alto",
+        "valor": 730000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EO06",
+        "nombre": "Muy alto",
+        "valor": 885000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EO07",
+        "nombre": "AAA",
+        "valor": 985000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "EDIFICIO EDUCATIVO": {
+    "niveles": [
+      {
+        "codigo": "EA01",
+        "nombre": "Básico tipo 1",
+        "valor": 245000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA02",
+        "nombre": "Básico tipo 2",
+        "valor": 185000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA03",
+        "nombre": "Tipo 3",
+        "valor": null,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA04",
+        "nombre": "Tipo 4",
+        "valor": 615000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA05",
+        "nombre": "Tipo 5",
+        "valor": 270000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA06",
+        "nombre": "Tipo 6",
+        "valor": 695000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA07",
+        "nombre": "Tipo 7",
+        "valor": 330000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA08",
+        "nombre": "Tipo 8",
+        "valor": 660000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EA09",
+        "nombre": "Universitario alto",
+        "valor": 990000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EB01",
+        "nombre": "Complementario básico 1",
+        "valor": 230000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EB02",
+        "nombre": "Complementario básico 2",
+        "valor": 640000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EL01",
+        "nombre": "Laboratorio",
+        "valor": 865000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EU01",
+        "nombre": "Universitario especial",
+        "valor": 800000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "HOSPITAL": {
+    "niveles": [
+      {
+        "codigo": "HP01",
+        "nombre": "Clínica / EBAIS",
+        "valor": 670000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "HP02",
+        "nombre": "Hospital general",
+        "valor": 1055000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "HP03",
+        "nombre": "Hospital especializado",
+        "valor": 1315000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "EDIFICIO RELIGIOSO": {
+    "niveles": [
+      {
+        "codigo": "CP01",
+        "nombre": "Capilla",
+        "valor": 475000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "ER01",
+        "nombre": "Tipo 1",
+        "valor": 375000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "ER02",
+        "nombre": "Tipo 2",
+        "valor": 480000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "ER03",
+        "nombre": "Tipo 3 — alto",
+        "valor": 525000,
+        "vidaUtil": 60
+      }
+    ]
+  },
+  "RESTAURANTE": {
+    "niveles": [
+      {
+        "codigo": "RE01",
+        "nombre": "Básico / soda",
+        "valor": 495000,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "RE02",
+        "nombre": "Estándar",
+        "valor": 865000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "RE03",
+        "nombre": "Alto",
+        "valor": 895000,
+        "vidaUtil": 115
+      },
+      {
+        "codigo": "RE04",
+        "nombre": "Gourmet / lujo",
+        "valor": 1050000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "CABINA": {
+    "niveles": [
+      {
+        "codigo": "CB01",
+        "nombre": "Económica básica (bambú)",
+        "valor": 175000,
+        "vidaUtil": 30
+      },
+      {
+        "codigo": "CB02",
+        "nombre": "Económica (contenedor)",
+        "valor": 215000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "CB03",
+        "nombre": "Estándar confort (contenedor)",
+        "valor": 500000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "CB04",
+        "nombre": "Básica rústica (mortero lanzado)",
+        "valor": 105000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CB05",
+        "nombre": "Madera básica (tubería concreto)",
+        "valor": 160000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CB06",
+        "nombre": "Madera media (mampostería)",
+        "valor": 270000,
+        "vidaUtil": 55
+      },
+      {
+        "codigo": "CB07",
+        "nombre": "Media",
+        "valor": 350000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "CB08",
+        "nombre": "Media alta",
+        "valor": 380000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "CB09",
+        "nombre": "Alta",
+        "valor": 545000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "CB10",
+        "nombre": "Lujo",
+        "valor": 875000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "CB11",
+        "nombre": "Lujo alta",
+        "valor": 985000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "CB12",
+        "nombre": "Rústica especial",
+        "valor": 215000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "CB13",
+        "nombre": "Media especial",
+        "valor": 325000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "CB14",
+        "nombre": "Tipo 14",
+        "valor": 160000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "CB15",
+        "nombre": "Alta especial",
+        "valor": 710000,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "CB16",
+        "nombre": "Lujo especial",
+        "valor": 930000,
+        "vidaUtil": 90
+      }
+    ]
+  },
+  "HOTEL": {
+    "niveles": [
+      {
+        "codigo": "HT01",
+        "nombre": "Básico / sin clasificación",
+        "valor": 690000,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "HT02",
+        "nombre": "Estándar",
+        "valor": 745000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "HT03",
+        "nombre": "Medio",
+        "valor": 820000,
+        "vidaUtil": 115
+      },
+      {
+        "codigo": "HT04",
+        "nombre": "Alto",
+        "valor": 865000,
+        "vidaUtil": 120
+      },
+      {
+        "codigo": "HT05",
+        "nombre": "Lujo",
+        "valor": 1080000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "MOTEL": {
+    "niveles": [
+      {
+        "codigo": "MO01",
+        "nombre": "Básico",
+        "valor": 130000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "MO02",
+        "nombre": "Estándar",
+        "valor": 225000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "MO03",
+        "nombre": "Medio",
+        "valor": 295000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "MO04",
+        "nombre": "Alto",
+        "valor": 350000,
+        "vidaUtil": 45
+      }
+    ]
+  },
+  "CINE": {
+    "niveles": [
+      {
+        "codigo": "CI01",
+        "nombre": "Cine",
+        "valor": null,
+        "vidaUtil": 45
+      }
+    ]
+  },
+  "TEATRO": {
+    "niveles": [
+      {
+        "codigo": "TE01",
+        "nombre": "Básico",
+        "valor": 295000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "TE02",
+        "nombre": "Estándar",
+        "valor": 370000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "GIMNASIO": {
+    "niveles": [
+      {
+        "codigo": "GM01",
+        "nombre": "Básico",
+        "valor": 340000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "GM02",
+        "nombre": "Estándar",
+        "valor": 400000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "GM03",
+        "nombre": "Alto",
+        "valor": 440000,
+        "vidaUtil": 40
+      }
+    ]
+  },
+  "GALERÓN": {
+    "niveles": [
+      {
+        "codigo": "GA01",
+        "nombre": "Básico / liviano",
+        "valor": 105000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "GA02",
+        "nombre": "Estándar",
+        "valor": 175000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "GA03",
+        "nombre": "Industrial",
+        "valor": 225000,
+        "vidaUtil": 80
+      }
+    ]
+  },
+  "BODEGA": {
+    "niveles": [
+      {
+        "codigo": "BO01",
+        "nombre": "Básica (contenedor)",
+        "valor": 205000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "BO02",
+        "nombre": "Estándar",
+        "valor": 280000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "BO03",
+        "nombre": "Industrial",
+        "valor": 340000,
+        "vidaUtil": 80
+      }
+    ]
+  },
+  "NAVE": {
+    "niveles": [
+      {
+        "codigo": "NA01",
+        "nombre": "Básica",
+        "valor": 225000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "NA02",
+        "nombre": "Estándar",
+        "valor": 340000,
+        "vidaUtil": 90
+      },
+      {
+        "codigo": "NA03",
+        "nombre": "Media",
+        "valor": 400000,
+        "vidaUtil": 95
+      },
+      {
+        "codigo": "NA04",
+        "nombre": "Alta",
+        "valor": 455000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "NA05",
+        "nombre": "Industrial alta",
+        "valor": 515000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "CASA CLUB": {
+    "niveles": [
+      {
+        "codigo": "CL01",
+        "nombre": "Básica",
+        "valor": 340000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "CL02",
+        "nombre": "Media",
+        "valor": 505000,
+        "vidaUtil": 105
+      },
+      {
+        "codigo": "CL03",
+        "nombre": "Alta",
+        "valor": 965000,
+        "vidaUtil": 120
+      }
+    ]
+  },
+  "EDIFICIO DE PARQUEO": {
+    "niveles": [
+      {
+        "codigo": "EP01",
+        "nombre": "Descubierto",
+        "valor": 225000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP02",
+        "nombre": "Cubierto básico",
+        "valor": 285000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP03",
+        "nombre": "Ascensor simple",
+        "valor": 1455000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP04",
+        "nombre": "Duplicador 2 postes",
+        "valor": 1910000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP05",
+        "nombre": "Duplicador subterráneo",
+        "valor": 3930000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP06",
+        "nombre": "Duplicador 4 postes",
+        "valor": 2810000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP07",
+        "nombre": "Torre 4 postes",
+        "valor": 2810000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP08",
+        "nombre": "Almacenamiento en torre",
+        "valor": 3365000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP09",
+        "nombre": "Almacenamiento rotatorio",
+        "valor": 3145000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP10",
+        "nombre": "Multinivel tablero",
+        "valor": 3730000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "EP11",
+        "nombre": "Elevador / cabina",
+        "valor": 11240000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "INSTALACIÓN": {
+    "niveles": [
+      {
+        "codigo": "BB01",
+        "nombre": "Batería de baño y vestidores",
+        "valor": 310000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "IQ01",
+        "nombre": "Rancho BBQ básico",
+        "valor": 230000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "IQ02",
+        "nombre": "Rancho BBQ estándar",
+        "valor": 335000,
+        "vidaUtil": 70
+      },
+      {
+        "codigo": "IQ03",
+        "nombre": "Rancho BBQ alto",
+        "valor": 460000,
+        "vidaUtil": 120
+      },
+      {
+        "codigo": "PL01",
+        "nombre": "Palenque (palma)",
+        "valor": 115000,
+        "vidaUtil": 25
+      },
+      {
+        "codigo": "PL02",
+        "nombre": "Palenque (caña brava)",
+        "valor": 175000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "PL03",
+        "nombre": "Palenque (mixto)",
+        "valor": 205000,
+        "vidaUtil": 55
+      },
+      {
+        "codigo": "PT01",
+        "nombre": "Pórtico básico",
+        "valor": 395000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "PT02",
+        "nombre": "Pórtico especial",
+        "valor": 500000,
+        "vidaUtil": 60
+      },
+      {
+        "codigo": "CS01",
+        "nombre": "Caseta seguridad (muro seco)",
+        "valor": 195000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "CS02",
+        "nombre": "Caseta seguridad (concreto básica)",
+        "valor": 320000,
+        "vidaUtil": 80
+      },
+      {
+        "codigo": "CS03",
+        "nombre": "Caseta seguridad (concreto alta)",
+        "valor": 600000,
+        "vidaUtil": 120
+      },
+      {
+        "codigo": "GK01",
+        "nombre": "Terraza / deck PVC",
+        "valor": 70000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "GK02",
+        "nombre": "Glorieta y quiosco madera",
+        "valor": 325000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "PC01",
+        "nombre": "Paso cubierto metal básico",
+        "valor": 75000,
+        "vidaUtil": 35
+      },
+      {
+        "codigo": "PC02",
+        "nombre": "Paso cubierto metal estándar",
+        "valor": 145000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "PC03",
+        "nombre": "Paso cubierto policarbonato",
+        "valor": 160000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "PR01",
+        "nombre": "Parqueo cubierto",
+        "valor": 145000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "ML01",
+        "nombre": "Obras decorativas mortero lanzado",
+        "valor": 50000,
+        "vidaUtil": 45
+      },
+      {
+        "codigo": "CR01",
+        "nombre": "Cerramiento metal/policarbonato",
+        "valor": 45000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CR02",
+        "nombre": "Cerramiento metal/vidrio/policarbonato",
+        "valor": 65000,
+        "vidaUtil": 80
+      }
+    ]
+  },
+  "GASOLINERA": {
+    "niveles": [
+      {
+        "codigo": "CN01",
+        "nombre": "Canal perimetral sencillo (¢/m lineal)",
+        "valor": 105000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "PA01",
+        "nombre": "Parrilla sobre CN01 (¢/m lineal)",
+        "valor": 54000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "CN02",
+        "nombre": "Canal perimetral doble (¢/m lineal)",
+        "valor": 140000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "PA02",
+        "nombre": "Parrilla sobre CN02 (¢/m lineal)",
+        "valor": 65000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "TC01",
+        "nombre": "Tanque pared sencilla 4.000 gal (¢/u)",
+        "valor": 3800000,
+        "vidaUtil": 30
+      },
+      {
+        "codigo": "TC02",
+        "nombre": "Tanque pared sencilla 5.000 gal (¢/u)",
+        "valor": 4450000,
+        "vidaUtil": 30
+      },
+      {
+        "codigo": "TC03",
+        "nombre": "Tanque pared sencilla 6.000 gal (¢/u)",
+        "valor": 4700000,
+        "vidaUtil": 30
+      },
+      {
+        "codigo": "TC04",
+        "nombre": "Tanque pared sencilla 7.000 gal (¢/u)",
+        "valor": 5800000,
+        "vidaUtil": 30
+      },
+      {
+        "codigo": "TC05",
+        "nombre": "Tanque pared sencilla 10.000 gal (¢/u)",
+        "valor": 6250000,
+        "vidaUtil": 30
+      },
+      {
+        "codigo": "TC06",
+        "nombre": "Tanque pared doble AC+FV 6.000 gal (¢/u)",
+        "valor": 6700000,
+        "vidaUtil": 35
+      },
+      {
+        "codigo": "TC07",
+        "nombre": "Tanque pared doble AC+FV 8.000 gal (¢/u)",
+        "valor": 8900000,
+        "vidaUtil": 35
+      },
+      {
+        "codigo": "TC08",
+        "nombre": "Tanque pared doble AC+FV 10.000 gal (¢/u)",
+        "valor": 10000000,
+        "vidaUtil": 35
+      },
+      {
+        "codigo": "TC09",
+        "nombre": "Tanque pared doble AC+PE 6.000 gal (¢/u)",
+        "valor": 10250000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "TC10",
+        "nombre": "Tanque pared doble AC+PE 8.000 gal (¢/u)",
+        "valor": 12350000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "TC11",
+        "nombre": "Tanque pared doble AC+PE 10.000 gal (¢/u)",
+        "valor": 14700000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "TC12",
+        "nombre": "Tanque pared doble AC+PE 12.000 gal (¢/u)",
+        "valor": 20900000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "TC13",
+        "nombre": "Tanque pared doble AC+PE 15.000 gal (¢/u)",
+        "valor": 30350000,
+        "vidaUtil": 40
+      }
+    ]
+  },
+  "TORRE TELEFONÍA CELULAR": {
+    "niveles": [
+      {
+        "codigo": "TM01",
+        "nombre": "Monopolo sencilla, 35 m",
+        "valor": 18000000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TM02",
+        "nombre": "Monopolo camuflada, 35 m",
+        "valor": 64000000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV01",
+        "nombre": "Venteada A, 12 m",
+        "valor": 390000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV02",
+        "nombre": "Venteada A, 20 m",
+        "valor": 3900000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV03",
+        "nombre": "Venteada B, 30 m",
+        "valor": 1400000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV04",
+        "nombre": "Venteada B, 40 m",
+        "valor": 1680000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV05",
+        "nombre": "Venteada C, 70 m",
+        "valor": 3900000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV06",
+        "nombre": "Venteada D, 120 m",
+        "valor": 6700000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV07",
+        "nombre": "Venteada E, 140 m",
+        "valor": 29000000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TV08",
+        "nombre": "Venteada EE, 180 m",
+        "valor": 37000000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TA01",
+        "nombre": "Autosoportada, 30 m",
+        "valor": 32500000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TA02",
+        "nombre": "Autosoportada, 50 m",
+        "valor": 38000000,
+        "vidaUtil": 20
+      },
+      {
+        "codigo": "TA03",
+        "nombre": "Autosoportada, 60 m",
+        "valor": 42000000,
+        "vidaUtil": 20
+      }
+    ]
+  },
+  "AGROPECUARIO — EQUINOS": {
+    "niveles": [
+      {
+        "codigo": "CU01",
+        "nombre": "Cuadra / establo básico",
+        "valor": 70000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "CU02",
+        "nombre": "Cuadra / establo estándar",
+        "valor": 180000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "CU03",
+        "nombre": "Cuadra / establo alto",
+        "valor": 325000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "PD01",
+        "nombre": "Picadero abierto tipo 1",
+        "valor": 48000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "PD02",
+        "nombre": "Picadero abierto tipo 2",
+        "valor": 86000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "PD03",
+        "nombre": "Picadero techado entrenamiento",
+        "valor": 92000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "PD04",
+        "nombre": "Picadero techado exhibición",
+        "valor": 124000,
+        "vidaUtil": 40
+      },
+      {
+        "codigo": "PD05",
+        "nombre": "Picadero techado alto",
+        "valor": 270000,
+        "vidaUtil": 40
+      }
+    ]
+  },
+  "AGROPECUARIO — REDONDEL": {
+    "niveles": [
+      {
+        "codigo": "RD01",
+        "nombre": "Redondel abierto básico",
+        "valor": 43000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "RD02",
+        "nombre": "Redondel abierto estándar",
+        "valor": 65000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "RD03",
+        "nombre": "Redondel semi-techado",
+        "valor": 105000,
+        "vidaUtil": 50
+      },
+      {
+        "codigo": "RD04",
+        "nombre": "Redondel techado",
+        "valor": 150000,
+        "vidaUtil": 50
+      }
+    ]
+  },
+  "AGROPECUARIO — AMBIENTE PROTEGIDO": {
+    "niveles": [
+      {
+        "codigo": "AM01",
+        "nombre": "Casa sombra (sarán)",
+        "valor": 3300,
+        "vidaUtil": 15
+      },
+      {
+        "codigo": "AM02",
+        "nombre": "Casa malla (anti insectos)",
+        "valor": 8200,
+        "vidaUtil": 15
+      },
+      {
+        "codigo": "AM03",
+        "nombre": "Túnel plástico",
+        "valor": 11500,
+        "vidaUtil": 15
+      },
+      {
+        "codigo": "AM04",
+        "nombre": "Cubierta plástica y pared malla",
+        "valor": 13200,
+        "vidaUtil": 15
+      },
+      {
+        "codigo": "AM05",
+        "nombre": "Cubierta plástica, malla y extra-equipo",
+        "valor": 36000,
+        "vidaUtil": 15
+      }
+    ]
+  }
+}
