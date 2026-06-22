@@ -1,0 +1,27 @@
+{
+  "productName": "Calculadora ONT",
+  "version": "1.0.0",
+  "identifier": "cr.go.sancarloscr.bienesimmuebles",
+  "build": {
+    "frontendDist": "../src/"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Calculadora de Tipologías y Depreciación · Bienes Inmuebles San Carlos",
+        "width": 1280,
+        "height": 860,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": []
+  }
+}
