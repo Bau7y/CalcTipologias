@@ -251,5 +251,16 @@
 
 <script src="assets/js/home.js"></script>
 
+<!-- ============================================================ -->
+<!-- MODAL DE IMPRESIÓN                                            -->
+<!-- ============================================================ -->
+<dialog id="modal-reporte">
+  <div id="modal-reporte-contenido"></div>
+  <div class="modal-acciones no-print">
+    <button class="btn-principal" onclick="window.print()">🖨 Imprimir / Guardar PDF</button>
+    <button class="btn-secundario" onclick="document.getElementById('modal-reporte').close()">✕ Cerrar</button>
+  </div>
+</dialog>
+
 </body>
 </html>

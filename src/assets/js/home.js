@@ -562,11 +562,11 @@ function calcularValorTerreno(){
   const r = calcularValorTerrenoCompleto(lote, zona);
   const f = r.factores;
 
+  // Guardar estado para el reporte de impresión
+  window._ultimoCalculo = { lote, zona: z, resultado: r };
+
   const filaFactor = (nombre, valor) => valor === null ? '' :
     `<div class="linea-calculo"><span>${nombre}</span><span>${valor}</span></div>`;
-
-  // Guardar estado actual para el reporte impreso
-  window._ultimoCalculo = { lote, zona: z, resultado: r, codDistrito, idxZona };
 
   cuerpo.innerHTML = `
     <div class="valor-final-box">
@@ -575,7 +575,7 @@ function calcularValorTerreno(){
       <div class="vf-detalle">₡${r.valorUnitarioAjustado.toLocaleString('es-CR', {maximumFractionDigits:2})} / m² × ${area.toLocaleString('es-CR')} m²</div>
     </div>
 
-    <div style="display:flex; gap:12px; margin-bottom:4px; flex-wrap:wrap; align-items:center;">
+    <div style="display:flex; gap:12px; margin-bottom:4px; align-items:center; flex-wrap:wrap;">
       <button type="button" class="detalle-toggle" onclick="toggleDetalleFactores()">
         <span id="terr-detalle-flecha">▸</span> Ver desglose de factores de ajuste
       </button>
@@ -604,47 +604,38 @@ function calcularValorTerreno(){
   document.getElementById('terr-resultado').classList.add('visible');
 }
 
-// ════════════════════════════════════════════════════════════════
-// REPORTE DE IMPRESIÓN — Genera ventana con formato de plantilla
-// oficial (Municipalidad de San Carlos, Oficina de Valoraciones)
-// ════════════════════════════════════════════════════════════════
 function imprimirReporte(){
   const uc = window._ultimoCalculo;
   if(!uc){ alert('Primero calcule el valor del terreno.'); return; }
 
-  const { lote, zona: z, resultado: r, codDistrito, idxZona } = uc;
+  const { lote, zona: z, resultado: r } = uc;
   const f = r.factores;
   const ahora = new Date();
   const fechaStr = ahora.toLocaleDateString('es-CR');
-  const horaStr = ahora.toLocaleTimeString('es-CR', {hour:'2-digit', minute:'2-digit'});
+  const horaStr  = ahora.toLocaleTimeString('es-CR', {hour:'2-digit', minute:'2-digit'});
   const esUrbano = r.esUrbano;
+  const fmtMon   = v => v != null ? `₡${Number(v).toLocaleString('es-CR',{maximumFractionDigits:2})}` : '—';
 
-  // ── Recolectar datos de construcciones del panel de depreciación ──
+  // ── Recolectar construcciones del panel de depreciación ──
   const filas = document.querySelectorAll('.fila-construccion');
-  let construccionesHTML = '';
-  let totalVn = 0, totalVA = 0;
-  let colNum = 1;
+  let construccionesHTML = '', totalVA = 0, colNum = 1;
 
   filas.forEach(fila => {
-    const id = fila.id.split('-')[1];
+    const id     = fila.id.split('-')[1];
     const tipo   = document.getElementById(`tipo-${id}`)?.value;
     const area   = parseFloat(document.getElementById(`area-${id}`)?.value) || 0;
-    const anio   = parseInt(document.getElementById(`anio-${id}`)?.value) || null;
+    const anio   = parseInt(document.getElementById(`anio-${id}`)?.value)   || null;
     const codIdx = document.getElementById(`codigo-${id}`)?.value;
     const estId  = parseInt(document.getElementById(`estado-${id}`)?.value);
     if(!tipo || codIdx==='' || !area || !anio) return;
-
-    const nivel   = TIPOLOGIAS[tipo].niveles[codIdx];
-    const estado  = ESTADOS_CONSERVACION.find(e => e.id === estId);
+    const nivel  = TIPOLOGIAS[tipo].niveles[codIdx];
+    const estado = ESTADOS_CONSERVACION.find(e => e.id === estId);
     if(!nivel?.valor) return;
-
-    const edad    = 2026 - anio;
-    const Vn      = nivel.valor * area;
-    const {VA}    = calcularValorActual(Vn, edad, nivel.vidaUtil, estado.coef);
-    const depPct  = ((Vn - VA) / Vn * 100).toFixed(2);
-    totalVn += Vn;
+    const edad   = 2026 - anio;
+    const Vn     = nivel.valor * area;
+    const {VA}   = calcularValorActual(Vn, edad, nivel.vidaUtil, estado.coef);
+    const depPct = ((Vn - VA) / Vn * 100).toFixed(2);
     totalVA += VA;
-
     construccionesHTML += `
       <td>
         <div class="c-desc">${tipo.split(' ')[0]}</div>
@@ -659,258 +650,160 @@ function imprimirReporte(){
       </td>`;
     colNum++;
   });
+  while(colNum <= 4){ construccionesHTML += '<td style="background:#f5f5f5;"></td>'; colNum++; }
+  const hayConstr = totalVA > 0;
 
-  // Completar columnas vacías hasta 4
-  while(colNum <= 4){ construccionesHTML += '<td class="col-vacia"></td>'; colNum++; }
-
-  const hayConstr = totalVn > 0;
-  const valorTotal = lote.areaLote * r.factorCompuesto * z.valor + totalVA;
-
-  // ── Helpers ──
-  const fmtMon = v => v != null ? `₡${Number(v).toLocaleString('es-CR',{maximumFractionDigits:2})}` : '—';
-  const fmtNum = v => v != null ? v : '—';
-  const fila2 = (etiq, val, etiq2, val2) =>
-    `<div class="info-fila"><span class="i-label">${etiq}</span><span class="i-val">${val}</span></div>
-     <div class="info-fila"><span class="i-label">${etiq2}</span><span class="i-val">${val2}</span></div>`;
-
-  // ── HTML del reporte ──
-  const html = `<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Reporte de Avalúo — ${z.codigo}</title>
-<style>
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{font-family:'Segoe UI',Arial,sans-serif; font-size:11px; color:#111; background:#fff; padding:14mm 14mm 10mm 14mm;}
-  /* ── Encabezado ── */
-  .rep-header{display:flex; align-items:center; gap:16px; border-bottom:2px solid #1B5E34; padding-bottom:8px; margin-bottom:10px;}
-  .rep-logo{width:52px; height:52px; border-radius:50%; object-fit:cover;}
-  .rep-logo-placeholder{width:52px; height:52px; border-radius:50%; background:#1B5E34; display:flex; align-items:center; justify-content:center; color:#fff; font-size:8px; font-weight:700; text-align:center; line-height:1.2; flex-shrink:0;}
-  .rep-titulo{flex:1;}
-  .rep-titulo h1{font-size:13px; font-weight:800; color:#1B5E34;}
-  .rep-titulo h2{font-size:11.5px; font-weight:700; color:#1B5E34;}
-  .rep-titulo p{font-size:10px; color:#555;}
-  .rep-fecha{text-align:right; font-size:10px; color:#555; white-space:nowrap;}
-
-  /* ── Secciones ── */
-  .seccion{border:1px solid #aaa; border-radius:4px; margin-bottom:8px; overflow:hidden;}
-  .sec-titulo{background:#1B5E34; color:#fff; font-size:10.5px; font-weight:700; padding:4px 10px;}
-  .sec-body{padding:8px 10px;}
-
-  /* ── Grid de datos del terreno ── */
-  .info-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:4px 8px;}
-  .info-celda{display:flex; flex-direction:column; gap:1px;}
-  .i-label{font-size:9px; color:#666; font-style:italic;}
-  .i-val{font-size:10.5px; font-weight:700; color:#0D3C6E;}
-  .i-sub{font-size:8.5px; color:#888; font-style:italic;}
-
-  /* ── Factores ── */
-  .factores-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:3px 12px;}
-  .f-fila{display:flex; justify-content:space-between; padding:2px 0; border-bottom:1px solid #eee; font-size:10px;}
-  .f-fila span:first-child{color:#555;}
-  .f-fila span:last-child{font-weight:700; color:#1B5E34;}
-  .f-fila.total{border-bottom:2px solid #1B5E34; font-weight:800;}
-  .factores-resumen{margin-top:6px; display:flex; justify-content:flex-end; gap:20px; font-size:10.5px;}
-  .factores-resumen span{font-weight:700; color:#0D3C6E;}
-
-  /* ── Construcciones ── */
-  .constr-tabla{width:100%; border-collapse:collapse; font-size:10px;}
-  .constr-tabla th{background:#0D3C6E; color:#fff; padding:4px 6px; text-align:center; font-weight:700;}
-  .constr-tabla td{border:1px solid #ccc; padding:5px 6px; vertical-align:top;}
-  .constr-tabla td.col-vacia{background:#f5f5f5;}
-  .c-desc{font-size:10px; font-weight:700; color:#0D3C6E; margin-bottom:2px;}
-  .c-tip{font-size:11px; font-weight:800; color:#1B5E34; margin-bottom:4px;}
-  .c-row{display:flex; justify-content:space-between; font-size:9.5px; padding:1px 0; border-bottom:1px solid #eee;}
-  .c-row span:first-child{color:#666;}
-  .c-total{margin-top:4px; font-size:11px; font-weight:800; color:#1B5E34; text-align:right; border-top:1px solid #1B5E34; padding-top:3px;}
-  .total-constr{text-align:right; font-size:10.5px; font-weight:700; margin-top:4px; color:#0D3C6E; border-top:1px solid #0D3C6E; padding-top:4px;}
-
-  /* ── Total avalúo ── */
-  .total-avaluo{display:grid; grid-template-columns:1fr auto; gap:0; align-items:stretch;}
-  .totales-box{padding:6px 10px;}
-  .t-fila{display:flex; justify-content:space-between; padding:3px 0; font-size:11px; border-bottom:1px solid #ddd;}
-  .t-fila.grande{font-size:14px; font-weight:800; color:#1B5E34; border:none; margin-top:4px; padding-top:4px; border-top:2px solid #1B5E34;}
-  .sello-box{border-left:1px solid #aaa; padding:8px 12px; display:flex; flex-direction:column; justify-content:space-between; min-width:160px;}
-  .sello-titulo{font-size:9px; font-weight:700; color:#1B5E34; text-align:center; text-transform:uppercase; letter-spacing:.4px;}
-  .sello-circle{width:70px; height:70px; border-radius:50%; border:3px solid #1B5E34; margin:4px auto; display:flex; align-items:center; justify-content:center; text-align:center;}
-  .sello-circle span{font-size:7px; font-weight:800; color:#1B5E34; text-transform:uppercase; line-height:1.3;}
-  .sello-lineas{font-size:9px; color:#333;}
-  .sello-linea{border-bottom:1px solid #333; margin-bottom:6px; padding-bottom:1px; font-size:8.5px; color:#666;}
-
-  @media print{
-    body{padding:8mm;}
-    .no-print{display:none !important;}
-  }
-</style>
-</head>
-<body>
-
-<!-- Botón de imprimir (solo pantalla) -->
-<div class="no-print" style="text-align:right; margin-bottom:10px;">
-  <button onclick="window.print()" style="background:#1B5E34;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;">🖨 Imprimir / Guardar PDF</button>
-</div>
-
-<!-- ENCABEZADO -->
-<div class="rep-header">
-  <div class="rep-logo-placeholder">MUNI<br>SC</div>
-  <div class="rep-titulo">
-    <h1>Municipalidad de San Carlos</h1>
-    <h2>Oficina de valoraciones</h2>
-    <p>Cálculo del valor del terreno y construcciones<br>(Avalúo de Bienes Inmuebles: AV-2010-2026)</p>
-  </div>
-  <div class="rep-fecha">${fechaStr} ${horaStr}</div>
-</div>
-
-<!-- SECCIÓN 1: DATOS DEL TERRENO -->
-<div class="seccion">
-  <div class="sec-titulo">1. Datos del terreno</div>
-  <div class="sec-body">
-    <div class="info-grid">
-      <div class="info-celda" style="grid-column:span 2;">
-        <span class="i-label">Zona homogénea</span>
-        <span class="i-val">${z.codigo}</span>
-        <span class="i-sub">${esUrbano ? 'Zona urbana' : 'Zona rural'}</span>
+  document.getElementById('modal-reporte-contenido').innerHTML = `
+    <!-- ENCABEZADO -->
+    <div class="rep-header">
+      <div class="rep-logo-placeholder">MUNI<br>SC</div>
+      <div class="rep-titulo">
+        <h1>Municipalidad de San Carlos</h1>
+        <h2>Oficina de valoraciones</h2>
+        <p>Cálculo del valor del terreno y construcciones<br>(Avalúo de Bienes Inmuebles: AV-2010-2026)</p>
       </div>
-      <div class="info-celda">
-        <span class="i-label">Área</span>
-        <span class="i-val">${lote.areaLote.toLocaleString('es-CR')} m²</span>
-        <span class="i-sub">(Área tipo: ${z.area.toLocaleString('es-CR')} m²)</span>
-      </div>
-      <div class="info-celda" style="grid-column:span 3;">
-        <span class="i-label">Frente</span>
-        <span class="i-val">${lote.frenteLote.toLocaleString('es-CR')} m</span>
-        <span class="i-sub">(Frente tipo: ${z.frente} m)</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Pendiente</span>
-        <span class="i-val">${lote.pendienteLote} %</span>
-        <span class="i-sub">(Pendiente tipo: ${z.pendiente ?? 0}%)</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Nivel</span>
-        <span class="i-val">${esUrbano ? (lote.nivelLote ?? 0)+' m' : 'N/A'}</span>
-        <span class="i-sub">(Nivel tipo: ${z.nivel ?? 0} m)</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Ubicación</span>
-        <span class="i-val">${esUrbano ? lote.ubicacionLote : 'N/A'}</span>
-        <span class="i-sub">(Ubicación tipo: ${z.ubicacion ?? 'N/A'})</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Regularidad</span>
-        <span class="i-val">${lote.regularidadLote}</span>
-        <span class="i-sub">(Regularidad tipo: ${z.regularidad ?? 1})</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Vía tipo</span>
-        <span class="i-val">${lote.tipoViaLote}</span>
-        <span class="i-sub">(Vía tipo: ${z.tipoVia})</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Servicios 1</span>
-        <span class="i-val">${esUrbano ? lote.servicios1Lote : 'N/A'}</span>
-        <span class="i-sub">(Servicios 1 tipo: ${z.servicios1 ?? 'N/A'})</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Servicios 2</span>
-        <span class="i-val">${lote.servicios2Lote}</span>
-        <span class="i-sub">(Servicios 2 tipo: ${z.servicios2})</span>
-      </div>
-      ${!esUrbano ? `
-      <div class="info-celda">
-        <span class="i-label">Uso de suelo</span>
-        <span class="i-val">${z.capUsoTierra ?? 'N/A'}</span>
-        <span class="i-sub">(Cap. uso tierra)</span>
-      </div>
-      <div class="info-celda">
-        <span class="i-label">Hidrología</span>
-        <span class="i-val">${lote.hidrologiaLote ?? 'N/A'}</span>
-        <span class="i-sub">(Hidro. tipo: ${z.hidrologia ?? 'N/A'})</span>
-      </div>` : `
-      <div class="info-celda"><span class="i-label">Uso de suelo</span><span class="i-val" style="color:#999;font-size:9px;">no aplica</span></div>
-      <div class="info-celda"><span class="i-label">Hidrología</span><span class="i-val" style="color:#999;font-size:9px;">no aplica</span></div>`}
+      <div class="rep-fecha">${fechaStr} ${horaStr}</div>
     </div>
-  </div>
-</div>
 
-<!-- SECCIÓN 2: FACTORES DE AJUSTE -->
-<div class="seccion">
-  <div class="sec-titulo">2. Factores de ajuste, valor ajustado y valor del terreno</div>
-  <div class="sec-body">
-    <div style="font-size:10px; margin-bottom:6px;">
-      <strong>Valor unitario lote tipo: ${fmtMon(z.valor)} / m²</strong>
-    </div>
-    <div class="factores-grid">
-      ${f.factorArea    != null ? `<div class="f-fila"><span>Factor extensión</span><span>${f.factorArea}</span></div>` : ''}
-      ${f.factorFrente  != null ? `<div class="f-fila"><span>Factor frente</span><span>${f.factorFrente}</span></div>` : ''}
-      ${f.factorPendiente != null ? `<div class="f-fila"><span>Factor pendiente</span><span>${f.factorPendiente}</span></div>` : ''}
-      ${f.factorNivel   != null ? `<div class="f-fila"><span>Factor nivel</span><span>${f.factorNivel}</span></div>` : ''}
-      ${f.factorUbicacion != null ? `<div class="f-fila"><span>Factor ubicación</span><span>${f.factorUbicacion}</span></div>` : '<div class="f-fila"><span style="color:#bbb">Factor ubicación</span><span style="color:#bbb">—</span></div>'}
-      ${f.factorRegularidad != null ? `<div class="f-fila"><span>Factor regularidad</span><span>${f.factorRegularidad}</span></div>` : ''}
-      ${f.factorVia     != null ? `<div class="f-fila"><span>Factor tipo vía</span><span>${f.factorVia}</span></div>` : ''}
-      ${f.factorServicios1 != null ? `<div class="f-fila"><span>Factor servicios 1</span><span>${f.factorServicios1}</span></div>` : '<div class="f-fila"><span style="color:#bbb">Factor servicios 1</span><span style="color:#bbb">—</span></div>'}
-      ${f.factorServicios2 != null ? `<div class="f-fila"><span>Factor servicios 2</span><span>${f.factorServicios2}</span></div>` : ''}
-      ${f.factorUsoSuelo != null ? `<div class="f-fila"><span>Factor uso suelo</span><span>${f.factorUsoSuelo}</span></div>` : '<div class="f-fila"><span style="color:#bbb">Uso suelo</span><span style="color:#bbb">no aplica</span></div>'}
-      ${f.factorHidrologia != null ? `<div class="f-fila"><span>Factor hidrología</span><span>${f.factorHidrologia}</span></div>` : '<div class="f-fila"><span style="color:#bbb">Hidrología</span><span style="color:#bbb">no aplica</span></div>'}
-    </div>
-    <div class="factores-resumen" style="margin-top:8px; flex-direction:column; align-items:flex-end; gap:2px;">
-      <div style="font-size:10px; color:#555;">Factor de ajuste global: <strong style="color:#1B5E34">${r.factorCompuesto}</strong></div>
-      <div style="font-size:10px; color:#555;">Valor unitario ajustado: <strong style="color:#1B5E34">${fmtMon(r.valorUnitarioAjustado)} / m²</strong></div>
-      <div style="font-size:12px; font-weight:800; color:#1B5E34;">Valor del terreno: ${fmtMon(r.valorTotalTerreno)}</div>
-    </div>
-  </div>
-</div>
-
-<!-- SECCIÓN 3: CONSTRUCCIONES -->
-<div class="seccion">
-  <div class="sec-titulo">3. Construcciones / Instalaciones:</div>
-  <div class="sec-body">
-    <table class="constr-tabla">
-      <thead>
-        <tr>
-          <th style="width:18%">Construcción</th>
-          <th>1</th><th>2</th><th>3</th><th>4</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="background:#f0f4f0; font-weight:700; font-size:9.5px; color:#555;">Descripción<br>Tipología<br>Área<br>Edad<br>Estado<br>Vida útil<br>Depreciación<br>Valor unitario<br><strong>Valor construcción</strong></td>
-          ${construccionesHTML}
-        </tr>
-      </tbody>
-    </table>
-    ${hayConstr ? `<div class="total-constr">Valor total de las construcciones: <strong>${fmtMon(totalVA)}</strong></div>` : '<div style="font-size:10px; color:#999; margin-top:4px;">Sin construcciones registradas.</div>'}
-  </div>
-</div>
-
-<!-- SECCIÓN 4: TOTAL DEL AVALÚO -->
-<div class="seccion">
-  <div class="sec-titulo">4. Valor total del avalúo</div>
-  <div class="sec-body total-avaluo">
-    <div class="totales-box">
-      <div class="t-fila"><span>TERRENO:</span><span><strong>${fmtMon(r.valorTotalTerreno)}</strong></span></div>
-      <div class="t-fila"><span>CONSTRUCCIONES:</span><span><strong>${fmtMon(totalVA)}</strong></span></div>
-      <div class="t-fila grande"><span>TOTAL:</span><span>${fmtMon(r.valorTotalTerreno + totalVA)}</span></div>
-    </div>
-    <div class="sello-box">
-      <div class="sello-titulo">Municipalidad de San Carlos<br>Bienes Inmuebles</div>
-      <div class="sello-circle"><span>SELLO<br>OFICIAL</span></div>
-      <div class="sello-lineas">
-        <div style="font-size:8.5px; color:#666; margin-bottom:8px;">Realizado por:</div>
-        <div class="sello-linea">&nbsp;</div>
-        <div style="font-size:8.5px; color:#666;">HORA: <span style="display:inline-block; width:60px; border-bottom:1px solid #333;">&nbsp;</span></div>
-        <div style="font-size:8.5px; color:#666; margin-top:4px;">NOMBRE: <span style="display:inline-block; width:50px; border-bottom:1px solid #333;">&nbsp;</span></div>
+    <!-- 1. DATOS DEL TERRENO -->
+    <div class="rep-seccion">
+      <div class="rep-sec-titulo">1. Datos del terreno</div>
+      <div class="rep-sec-body">
+        <div class="rep-info-grid">
+          <div class="rep-celda span2">
+            <span class="ri-label">Zona homogénea</span>
+            <span class="ri-val">${z.codigo}</span>
+            <span class="ri-sub">${esUrbano ? 'Zona urbana' : 'Zona rural'}</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Área</span>
+            <span class="ri-val">${lote.areaLote.toLocaleString('es-CR')} m²</span>
+            <span class="ri-sub">(Área tipo: ${z.area} m²)</span>
+          </div>
+          <div class="rep-celda span3">
+            <span class="ri-label">Frente</span>
+            <span class="ri-val">${lote.frenteLote} m</span>
+            <span class="ri-sub">(Frente tipo: ${z.frente} m)</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Pendiente</span>
+            <span class="ri-val">${lote.pendienteLote} %</span>
+            <span class="ri-sub">(Pendiente tipo: ${z.pendiente ?? 0}%)</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Nivel</span>
+            <span class="ri-val">${esUrbano ? (lote.nivelLote ?? 0)+' m' : 'N/A'}</span>
+            <span class="ri-sub">(Nivel tipo: ${z.nivel ?? 0} m)</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Ubicación</span>
+            <span class="ri-val">${esUrbano ? lote.ubicacionLote : 'N/A'}</span>
+            <span class="ri-sub">(Ubicación tipo: ${z.ubicacion ?? 'N/A'})</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Regularidad</span>
+            <span class="ri-val">${lote.regularidadLote}</span>
+            <span class="ri-sub">(Regularidad tipo: ${z.regularidad ?? 1})</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Vía tipo</span>
+            <span class="ri-val">${lote.tipoViaLote}</span>
+            <span class="ri-sub">(Vía tipo: ${z.tipoVia})</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Servicios 1</span>
+            <span class="ri-val">${esUrbano ? lote.servicios1Lote : 'N/A'}</span>
+            <span class="ri-sub">(Servicios 1 tipo: ${z.servicios1 ?? 'N/A'})</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Servicios 2</span>
+            <span class="ri-val">${lote.servicios2Lote}</span>
+            <span class="ri-sub">(Servicios 2 tipo: ${z.servicios2})</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Uso de suelo</span>
+            <span class="ri-val">${!esUrbano ? (z.capUsoTierra ?? 'N/A') : 'no aplica'}</span>
+          </div>
+          <div class="rep-celda">
+            <span class="ri-label">Hidrología</span>
+            <span class="ri-val">${!esUrbano ? (lote.hidrologiaLote ?? 'N/A') : 'no aplica'}</span>
+            ${!esUrbano ? `<span class="ri-sub">(Hidro. tipo: ${z.hidrologia ?? 'N/A'})</span>` : ''}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-</body>
-</html>`;
+    <!-- 2. FACTORES DE AJUSTE -->
+    <div class="rep-seccion">
+      <div class="rep-sec-titulo">2. Factores de ajuste, valor ajustado y valor del terreno</div>
+      <div class="rep-sec-body">
+        <div style="font-size:10px; margin-bottom:6px;"><strong>Valor unitario lote tipo: ${fmtMon(z.valor)} / m²</strong></div>
+        <div class="rep-factores-grid">
+          ${f.factorArea      != null ? `<div class="rf"><span>Factor extensión</span><span>${f.factorArea}</span></div>` : ''}
+          ${f.factorFrente    != null ? `<div class="rf"><span>Factor frente</span><span>${f.factorFrente}</span></div>` : ''}
+          ${f.factorPendiente != null ? `<div class="rf"><span>Factor pendiente</span><span>${f.factorPendiente}</span></div>` : ''}
+          ${f.factorNivel     != null ? `<div class="rf"><span>Factor nivel</span><span>${f.factorNivel}</span></div>` : ''}
+          ${f.factorUbicacion != null ? `<div class="rf"><span>Factor ubicación</span><span>${f.factorUbicacion}</span></div>` : '<div class="rf"><span style="color:#bbb">Factor ubicación</span><span style="color:#bbb">—</span></div>'}
+          ${f.factorRegularidad != null ? `<div class="rf"><span>Factor regularidad</span><span>${f.factorRegularidad}</span></div>` : ''}
+          ${f.factorVia       != null ? `<div class="rf"><span>Factor tipo vía</span><span>${f.factorVia}</span></div>` : ''}
+          ${f.factorServicios1 != null ? `<div class="rf"><span>Factor servicios 1</span><span>${f.factorServicios1}</span></div>` : '<div class="rf"><span style="color:#bbb">Factor servicios 1</span><span style="color:#bbb">—</span></div>'}
+          ${f.factorServicios2 != null ? `<div class="rf"><span>Factor servicios 2</span><span>${f.factorServicios2}</span></div>` : ''}
+          ${f.factorUsoSuelo  != null ? `<div class="rf"><span>Factor uso suelo</span><span>${f.factorUsoSuelo}</span></div>` : '<div class="rf"><span style="color:#bbb">Uso suelo</span><span style="color:#bbb">no aplica</span></div>'}
+          ${f.factorHidrologia != null ? `<div class="rf"><span>Factor hidrología</span><span>${f.factorHidrologia}</span></div>` : '<div class="rf"><span style="color:#bbb">Hidrología</span><span style="color:#bbb">no aplica</span></div>'}
+        </div>
+        <div style="text-align:right; margin-top:8px; font-size:10.5px; line-height:1.8;">
+          <div>Factor de ajuste global: <strong style="color:#1B5E34">${r.factorCompuesto}</strong></div>
+          <div>Valor unitario ajustado: <strong style="color:#1B5E34">${fmtMon(r.valorUnitarioAjustado)} / m²</strong></div>
+          <div style="font-size:13px; font-weight:800; color:#1B5E34;">Valor del terreno: ${fmtMon(r.valorTotalTerreno)}</div>
+        </div>
+      </div>
+    </div>
 
-  const ventana = window.open('', '_blank', 'width=900,height=750');
-  ventana.document.write(html);
-  ventana.document.close();
+    <!-- 3. CONSTRUCCIONES -->
+    <div class="rep-seccion">
+      <div class="rep-sec-titulo">3. Construcciones / Instalaciones:</div>
+      <div class="rep-sec-body">
+        <table class="rep-constr-tabla">
+          <thead><tr>
+            <th style="width:16%">Construcción</th>
+            <th>1</th><th>2</th><th>3</th><th>4</th>
+          </tr></thead>
+          <tbody><tr>
+            <td style="background:#f0f4f0; font-size:9px; color:#555; font-weight:600; line-height:2;">
+              Descripción<br>Tipología<br>Área<br>Edad<br>Estado<br>Vida útil<br>Depreciación<br>Valor unitario<br><strong>Valor construcción</strong>
+            </td>
+            ${construccionesHTML}
+          </tr></tbody>
+        </table>
+        ${hayConstr
+          ? `<div style="text-align:right; font-size:10.5px; font-weight:700; margin-top:4px; color:#0D3C6E; border-top:1px solid #0D3C6E; padding-top:4px;">Valor total de las construcciones: <strong>${fmtMon(totalVA)}</strong></div>`
+          : `<div style="font-size:10px; color:#999; margin-top:4px;">Sin construcciones registradas.</div>`}
+      </div>
+    </div>
+
+    <!-- 4. TOTAL DEL AVALÚO -->
+    <div class="rep-seccion">
+      <div class="rep-sec-titulo">4. Valor total del avalúo</div>
+      <div class="rep-sec-body rep-total-grid">
+        <div class="rep-totales">
+          <div class="rep-t-fila"><span>TERRENO:</span><span><strong>${fmtMon(r.valorTotalTerreno)}</strong></span></div>
+          <div class="rep-t-fila"><span>CONSTRUCCIONES:</span><span><strong>${fmtMon(totalVA)}</strong></span></div>
+          <div class="rep-t-fila grande"><span>TOTAL:</span><span>${fmtMon(r.valorTotalTerreno + totalVA)}</span></div>
+        </div>
+        <div class="rep-sello">
+          <div class="rep-sello-titulo">Municipalidad de San Carlos<br>Bienes Inmuebles</div>
+          <div class="rep-sello-circle"><span>SELLO<br>OFICIAL</span></div>
+          <div style="font-size:8.5px; color:#555; line-height:2.2;">
+            <div>Realizado por:</div>
+            <div style="border-bottom:1px solid #333; width:100%; margin-bottom:4px;">&nbsp;</div>
+            <div>HORA: <span style="display:inline-block;width:55px;border-bottom:1px solid #555;">&nbsp;</span></div>
+            <div>NOMBRE: <span style="display:inline-block;width:45px;border-bottom:1px solid #555;">&nbsp;</span></div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  document.getElementById('modal-reporte').showModal();
 }
 
 function toggleDetalleFactores(){
