@@ -3,49 +3,49 @@
     "niveles": [
       {
         "codigo": "VC01",
-        "nombre": "Económica básica (42–90 m²)",
+        "nombre": "Económica básica (42-90 m²)",
         "valor": 260000,
         "vidaUtil": 50
       },
       {
         "codigo": "VC02",
-        "nombre": "Económica (80–110 m²)",
+        "nombre": "Económica (80-110 m²)",
         "valor": 320000,
         "vidaUtil": 55
       },
       {
         "codigo": "VC03",
-        "nombre": "Media baja (100–150 m²)",
+        "nombre": "Media baja (100-150 m²)",
         "valor": 365000,
         "vidaUtil": 65
       },
       {
         "codigo": "VC04",
-        "nombre": "Media (140–220 m²)",
+        "nombre": "Media (140-220 m²)",
         "valor": 425000,
         "vidaUtil": 70
       },
       {
         "codigo": "VC05",
-        "nombre": "Media alta (210–250 m²)",
+        "nombre": "Media alta (210-250 m²)",
         "valor": 485000,
         "vidaUtil": 90
       },
       {
         "codigo": "VC06",
-        "nombre": "Residencial (240–300 m²)",
+        "nombre": "Residencial (240-300 m²)",
         "valor": 545000,
         "vidaUtil": 105
       },
       {
         "codigo": "VC07",
-        "nombre": "Residencial alta (290–350 m²)",
+        "nombre": "Residencial alta (290-350 m²)",
         "valor": 700000,
         "vidaUtil": 120
       },
       {
         "codigo": "VC08",
-        "nombre": "Lujo (340–400 m²)",
+        "nombre": "Lujo (340-400 m²)",
         "valor": 920000,
         "vidaUtil": 120
       },
@@ -77,7 +77,7 @@
     "niveles": [
       {
         "codigo": "VS01",
-        "nombre": "Económica (100–150 m²)",
+        "nombre": "Económica (100-150 m²)",
         "valor": 310000,
         "vidaUtil": 40
       },
@@ -119,7 +119,7 @@
     "niveles": [
       {
         "codigo": "VL01",
-        "nombre": "Vivienda loft (200–250 m²)",
+        "nombre": "Vivienda loft (200-250 m²)",
         "valor": 515000,
         "vidaUtil": 115
       }
@@ -129,7 +129,7 @@
     "niveles": [
       {
         "codigo": "VI01",
-        "nombre": "Pirámide / iglú (36–42 m²)",
+        "nombre": "Pirámide / iglú (36-42 m²)",
         "valor": 570000,
         "vidaUtil": 70
       }
@@ -145,7 +145,7 @@
       },
       {
         "codigo": "VP02",
-        "nombre": "Estándar (40–100 m²)",
+        "nombre": "Estándar (40-100 m²)",
         "valor": null,
         "vidaUtil": 90
       }
@@ -161,19 +161,19 @@
       },
       {
         "codigo": "VM02",
-        "nombre": "Económica (80–150 m²)",
+        "nombre": "Económica (80-150 m²)",
         "valor": 425000,
         "vidaUtil": 100
       },
       {
         "codigo": "VM03",
-        "nombre": "Media (140–200 m²)",
+        "nombre": "Media (140-200 m²)",
         "valor": 635000,
         "vidaUtil": 105
       },
       {
         "codigo": "VM04",
-        "nombre": "Residencial (190–400 m²)",
+        "nombre": "Residencial (190-400 m²)",
         "valor": 985000,
         "vidaUtil": 120
       }
@@ -203,7 +203,7 @@
     "niveles": [
       {
         "codigo": "VH01",
-        "nombre": "Vivienda de bahareque (80–149 m²)",
+        "nombre": "Vivienda de bahareque (80-149 m²)",
         "valor": 545000,
         "vidaUtil": 45
       }
@@ -213,19 +213,19 @@
     "niveles": [
       {
         "codigo": "CÑ01",
-        "nombre": "Cabaña tipo 1 (30–79 m²)",
+        "nombre": "Cabaña tipo 1 (30-79 m²)",
         "valor": 365000,
         "vidaUtil": 80
       },
       {
         "codigo": "CÑ02",
-        "nombre": "Cabaña tipo 2 (80–149 m²)",
+        "nombre": "Cabaña tipo 2 (80-149 m²)",
         "valor": 475000,
         "vidaUtil": 100
       },
       {
         "codigo": "CÑ03",
-        "nombre": "Cabaña tipo 3 (150–300 m²)",
+        "nombre": "Cabaña tipo 3 (150-300 m²)",
         "valor": 545000,
         "vidaUtil": 105
       }
@@ -241,7 +241,7 @@
       },
       {
         "codigo": "CH02",
-        "nombre": "Chalet tipo 2 (64–100 m²)",
+        "nombre": "Chalet tipo 2 (64-100 m²)",
         "valor": 435000,
         "vidaUtil": 100
       }
